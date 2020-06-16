@@ -4,6 +4,7 @@ import router from "./router";
 
 Vue.config.productionTip = false;
 import "bootstrap/dist/css/bootstrap.min.css";
+import "material-icons/iconfont/material-icons.css";
 
 new Vue({
   router,
