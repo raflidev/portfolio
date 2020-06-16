@@ -3,7 +3,13 @@
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
         <router-link class="navbar-brand" to="/">
-          <img src="@/assets/logo.png" active-class="active" width="60" height="60" alt />
+          <img
+            src="@/assets/watermark.jpg"
+            active-class="active"
+            width="60"
+            height="60"
+            alt
+          />
         </router-link>
         <button
           class="navbar-toggler"
@@ -19,26 +25,30 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <router-link class="nav-link" active-class="active" to="/">WORK</router-link>
+              <router-link class="nav-link" active-class="active" to="/about"
+                >ABOUT ME</router-link
+              >
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" active-class="active" to="/about">ABOUT ME</router-link>
+              <router-link class="nav-link" active-class="active" to="/roadmap"
+                >BLOG</router-link
+              >
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" active-class="active" to="/roadmap">BLOG</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link" active-class="active" to="/roadmap">CONTACT</router-link>
+              <router-link class="nav-link" active-class="active" to="/roadmap"
+                >CONTACT</router-link
+              >
             </li>
             <li class="nav-item">
               <span class="nav-divider"></span>
             </li>
             <li class="nav-item">
               <router-link
-                class="btn btn-outline-dark rounded-pill px-3"
+                class="btn btn-dark rounded-pill px-3"
                 active-class="active"
                 to="/login"
-              >HIRE ME</router-link>
+                >HIRE ME</router-link
+              >
             </li>
           </ul>
         </div>
