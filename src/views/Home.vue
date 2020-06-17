@@ -20,6 +20,13 @@
               <a href="https://" target="_blank" class="pr-4">
                 <img src="@/assets/social-media/youtube.svg" width="40" />
               </a>
+              <a
+                href="https://open.spotify.com/show/5TcR4q4Gy3rplg026XGo5Q?si=xSj1CgCqShK7BtDT1gb4WA"
+                target="_blank"
+                class="pr-4"
+              >
+                <img src="@/assets/social-media/spotify.svg" width="40" />
+              </a>
               <a href="https://github.com/raflidev" target="_blank" class="pr-4">
                 <img src="@/assets/social-media/github.svg" width="40" />
               </a>
@@ -40,7 +47,7 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <img src="http://instagram.com/p/BnqezI4AfNE/media/?size=l" width="500" />
+          <img src="me/home.jpg" width="500" />
         </div>
       </div>
     </div>
@@ -59,18 +66,18 @@
             @click="selectedCategory = 'ui'"
             class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
           >UI</button>
-          <button
+          <!-- <button
             @click="selectedCategory = 'desktop'"
             class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
-          >Desktop</button>
+          >Desktop</button>-->
         </div>
         <div class="row">
-          <div class="col-lg-4 py-4" v-for="work in filteredPeople" :key="work.index">
+          <div class="col-lg-4 py-4" v-for="work in filteredWork" :key="work.index">
             <div class="card work">
               <img v-bind:src="work.image" class="card-img-top" width="325" srcset />
               <div class="card-body py-0 pt-2">
                 <div class="info-porfolio">
-                  <a href="http://" class>
+                  <a v-bind:href="'project/' + work.id" class>
                     <span class="material-icons rounded-circle">visibility</span>
                   </a>
                 </div>
@@ -85,6 +92,7 @@
         </div>
         <div class="text-center">
           <button
+            @click="showWork += 5"
             class="my-3 font-14 btn btn-outline-dark rounded-pill text-uppercase font-weight-bold"
           >Load more work</button>
         </div>
@@ -99,59 +107,38 @@ export default {
       test: "ya",
       works: [
         {
+          id: 0,
           name: "Bendahara",
           image: "/post/post.jpg",
           year: 2019,
-          platform: "ui"
+          platform: "ui",
+          desc: "Bendahara"
         },
         {
+          id: 1,
           name: "Projectsekolah!",
-          image: "https://www.instagram.com/p/BwCQuo_AnMA/media/?size=l",
+          image: "/post/psekolah.jpg",
+          tools: ["vscode", "php", "mysql"],
           year: 2019,
-          platform: "web"
+          platform: "web",
+          desc:
+            "Aplikasi ini digunakan untuk mengabsen piket dikelas karena saya ditunjuk untuk menjadi ketua piket. Aplikasi ini juga digunakan untuk melihat jadwal pelajaran disekolah. Aplikasi ini dibuat dengan php native, mysql dan css native tanpa framework karena ini adalah project pertama saya"
         },
         {
-          name: "Projectsekolah!",
-          image: "https://www.instagram.com/p/BwCQuo_AnMA/media/?size=l",
-          year: 2019,
-          platform: "web"
-        },
-        {
-          name: "Projectsekolah!",
-          image: "https://www.instagram.com/p/BwCQuo_AnMA/media/?size=l",
-          year: 2019,
-          platform: "web"
-        },
-        {
-          name: "Projectsekolah!",
-          image: "https://www.instagram.com/p/BwCQuo_AnMA/media/?size=l",
-          year: 2019,
-          platform: "web"
-        },
-        {
-          name: "Projectsekolah!",
-          image: "https://www.instagram.com/p/BwCQuo_AnMA/media/?size=l",
-          year: 2019,
-          platform: "web"
-        },
-        {
-          name: "Projectsekolah!",
-          image: "https://www.instagram.com/p/BwCQuo_AnMA/media/?size=l",
-          year: 2019,
-          platform: "web"
-        },
-        {
+          id: 2,
           name: "bankmini",
           image: "/post/bankmini.png",
           year: 2019,
-          platform: "web"
+          platform: "web",
+          desc: "Bankmini"
         }
       ],
-      selectedCategory: "All"
+      selectedCategory: "All",
+      showWork: 6
     };
   },
   computed: {
-    filteredPeople: function() {
+    filteredWork: function() {
       var category = this.selectedCategory;
 
       if (category === "All") {
@@ -161,11 +148,6 @@ export default {
           return worka.platform === category;
         });
       }
-    }
-  },
-  methods: {
-    filterItems: function() {
-      console.log(JSON.stringify(this.work));
     }
   }
 };
