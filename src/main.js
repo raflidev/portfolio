@@ -3,12 +3,15 @@ import App from "./App.vue";
 import router from "./router";
 
 Vue.config.productionTip = false;
-import "bootstrap/dist/css/bootstrap.min.css";
 import "material-icons/iconfont/material-icons.css";
-import store from './store'
+import "jquery/dist/jquery.js";
+import "popper.js/dist/popper.min.js";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+import store from "./store";
 
 new Vue({
   router,
   store,
-  render: (h) => h(App)
+  render: (h) => h(App),
 }).$mount("#app");

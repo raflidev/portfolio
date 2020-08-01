@@ -37,17 +37,17 @@
             <div class="action-link pt-5 mb-5">
               <a
                 href="http://"
-                class="btn btn-dark rounded-pill py-2 px-4 mr-4 font-weight-bolder"
+                class="btn btn-dark rounded-pill py-2 mb-3 px-4 mr-4 font-weight-bolder"
               >HIRE ME</a>
               <a
                 href="http://"
-                class="btn btn-outline-dark rounded-pill py-2 px-4 mr-4 font-weight-bolder"
+                class="btn btn-outline-dark rounded-pill py-2 mb-3 px-4 mr-4 font-weight-bolder"
               >SEE MY RESUME</a>
             </div>
           </div>
         </div>
         <div class="col-lg-6">
-          <img src="me/home.jpg" width="500" />
+          <img src="me/home.jpg" class="img-fluid" width="500" />
         </div>
       </div>
     </div>
@@ -91,10 +91,15 @@
           </div>
         </div>
         <div class="text-center">
-          <button
+          <!-- <button
             @click="showWork += 5"
             class="my-3 font-14 btn btn-outline-dark rounded-pill text-uppercase font-weight-bold"
-          >Load more work</button>
+          >Load more work</button>-->
+
+          <router-link
+            to="/project"
+            class="my-3 font-14 btn btn-outline-dark rounded-pill text-uppercase font-weight-bold"
+          >Load more work</router-link>
         </div>
       </div>
     </div>
@@ -133,8 +138,7 @@ export default {
           desc: "Bankmini"
         }
       ],
-      selectedCategory: "All",
-      showWork: 6
+      selectedCategory: "All"
     };
   },
   computed: {

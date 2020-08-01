@@ -1,33 +1,47 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-7">
-        <img v-bind:src="works[$route.params.id].image" class="img-fluid" />
+  <div>
+    <div class="container">
+      <h1 class="mt-5 font-weight-bold">Project</h1>
+      <h4 class="font-weight-light">My best work and stuff</h4>
+      <div class="py-4 text-center option-work">
+        <button
+          @click="selectedCategory = 'All'"
+          class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
+        >All</button>
+        <button
+          @click="selectedCategory = 'web'"
+          class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
+        >Web</button>
+        <button
+          @click="selectedCategory = 'ui'"
+          class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
+        >UI</button>
+        <!-- <button
+            @click="selectedCategory = 'desktop'"
+            class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
+        >Desktop</button>-->
       </div>
-      <div class="col-lg-5">
-        <div class="pt-4">
-          <h2
-            class="text-uppercase font-weight-bolder text-redhat mb-0"
-          >{{works[$route.params.id].name}}</h2>
-          <h5 class="text-uppercase font-weight-bold text-secondary text-redhat">
-            {{works[$route.params.id].platform}}
-            <span class="mx-1">|</span>
-            {{works[$route.params.id].year}}
-          </h5>
-          <div class="py-4">
-            <h5 class="font-weight-bold">Tools</h5>
-            <div>
-              <img
-                v-for="index in works[$route.params.id].tools.length"
-                :key="index"
-                v-bind:src="'/tools/'+works[$route.params.id].tools[index - 1]+'.png'"
-                width="40"
-                class="mr-3"
-              />
+      <div class="row">
+        <div
+          class="col-lg-4 col-md-6 col-sm-12 py-4"
+          v-for="work in filteredWork"
+          :key="work.index"
+        >
+          <div class="card work">
+            <img v-bind:src="work.image" class="card-img-top" width="325" srcset />
+            <div class="card-body py-0 pt-2">
+              <div class="info-porfolio">
+                <a v-bind:href="'project/' + work.id" class>
+                  <span class="material-icons rounded-circle">visibility</span>
+                </a>
+              </div>
+              <h6
+                class="font-weight-bold mb-0 text-muted text-uppercase category"
+              >{{ work.platform }}</h6>
+              <p class="font-weight-bold float-left text-uppercase">{{ work.name }}</p>
+              <p class="font-weight-bold float-right">{{ work.year }}</p>
             </div>
           </div>
-
-          <p class="text-justify">{{works[$route.params.id].desc}}</p>
         </div>
       </div>
     </div>
@@ -45,16 +59,12 @@ export default {
           image: "/post/post.jpg",
           year: 2019,
           platform: "ui",
-          // tools: [{ name: "vscode" }, { name: "php" }, { name: "mysql" }],
-          tools: ["vscode", "php", "mysql"],
-
           desc: "Bendahara"
         },
         {
           id: 1,
           name: "Projectsekolah!",
           image: "/post/psekolah.jpg",
-          // tools: [{ name: "vscode" }, { name: "php" }, { name: "mysql" }],
           tools: ["vscode", "php", "mysql"],
           year: 2019,
           platform: "web",
@@ -66,14 +76,25 @@ export default {
           name: "bankmini",
           image: "/post/bankmini.png",
           year: 2019,
-          // tools: [{ name: "vscode" }, { name: "php" }, { name: "mysql" }],
-          tools: ["vscode", "php", "mysql"],
-
           platform: "web",
           desc: "Bankmini"
         }
-      ]
+      ],
+      selectedCategory: "All"
     };
+  },
+  computed: {
+    filteredWork: function() {
+      var category = this.selectedCategory;
+
+      if (category === "All") {
+        return this.works;
+      } else {
+        return this.works.filter(function(worka) {
+          return worka.platform === category;
+        });
+      }
+    }
   }
 };
 </script>
