@@ -5,15 +5,15 @@
       <h4 class="font-weight-light">My best work and stuff</h4>
       <div class="py-4 text-center option-work">
         <button
-          @click="selectedCategory = 'All'"
+          @click="$store.state.selectedCategory = 'All'"
           class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
         >All</button>
         <button
-          @click="selectedCategory = 'web'"
+          @click="$store.state.selectedCategory = 'web'"
           class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
         >Web</button>
         <button
-          @click="selectedCategory = 'ui'"
+          @click="$store.state.selectedCategory = 'ui'"
           class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
         >UI</button>
         <!-- <button
@@ -49,43 +49,12 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
-  data() {
-    return {
-      works: [
-        {
-          id: 0,
-          name: "Bendahara",
-          image: "/post/post.jpg",
-          year: 2019,
-          platform: "ui",
-          desc: "Bendahara"
-        },
-        {
-          id: 1,
-          name: "Projectsekolah!",
-          image: "/post/psekolah.jpg",
-          tools: ["vscode", "php", "mysql"],
-          year: 2019,
-          platform: "web",
-          desc:
-            "Aplikasi ini digunakan untuk mengabsen piket dikelas karena saya ditunjuk untuk menjadi ketua piket. Aplikasi ini juga digunakan untuk melihat jadwal pelajaran disekolah. Aplikasi ini dibuat dengan php native, mysql dan css native tanpa framework karena ini adalah project pertama saya"
-        },
-        {
-          id: 2,
-          name: "bankmini",
-          image: "/post/bankmini.png",
-          year: 2019,
-          platform: "web",
-          desc: "Bankmini"
-        }
-      ],
-      selectedCategory: "All"
-    };
-  },
   computed: {
+    ...mapState(["works"]),
     filteredWork: function() {
-      var category = this.selectedCategory;
+      var category = this.$store.state.selectedCategory;
 
       if (category === "All") {
         return this.works;
