@@ -51,7 +51,7 @@
         </div>
       </div>
     </div>
-    <div class>
+    <div>
       <div class="container">
         <div class="py-4 text-center option-work">
           <button
@@ -72,7 +72,8 @@
           >Desktop</button>-->
         </div>
         <div class="row">
-          <div class="col-lg-4 py-4" v-for="work in filteredWork" :key="work.index">
+          <div class="col-lg-4 col-md-6 py-4" v-for="work in home" :key="work.index">
+            <!-- {{works}} -->
             <div class="card work">
               <img v-bind:src="work.image" class="card-img-top" width="325" srcset />
               <div class="card-body py-0 pt-2">
@@ -103,25 +104,37 @@
         </div>
       </div>
     </div>
+    <div class="mt-5 container">
+      <h1 class="text-center font-weight-bold">READ ME</h1>
+      <h4 class="font-weight-light mt-0 text-center">Sometimes i write and sharing</h4>
+      <div class="row mt-5 mb-3">
+        <div class="col-lg-4 col-md-6" v-for="blog in 3" :key="blog.index">
+          <div class="card mb-4 border-0">
+            <p class="position-absolute text-center bg-dark text-white p-3 font-weight-bold">
+              10
+              <br />June
+            </p>
+            <img class="card-img-top" src="http://placehold.it/300x200" alt="Card image cap" />
+            <div class="card-body">
+              <h3 class="card-title font-weight-bold">Post Title</h3>
+              <p
+                class="card-text font-weight-light mb-0"
+              >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et ducimus quam dolorem culpa placeat temporibus beatae quae voluptatem fugiat esse.</p>
+              <router-link
+                to="/project"
+                class="my-3 font-14 btn btn-outline-dark rounded-pill text-uppercase font-weight-bold"
+              >Read More</router-link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 </template>
 <script>
 import { mapState } from "vuex";
 export default {
-  computed: {
-    ...mapState(["works"]),
-    filteredWork: function() {
-      var category = this.$store.state.selectedCategory;
-
-      if (category === "All") {
-        return this.works;
-      } else {
-        return this.works.filter(function(worka) {
-          return worka.platform === category;
-        });
-      }
-    }
-  }
+  computed: mapState(["home"])
 };
 </script>
 

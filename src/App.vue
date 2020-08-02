@@ -45,9 +45,15 @@
       </nav>
     </div>
     <router-view />
+    <Footer />
   </section>
 </template>
-
+<script>
+import Footer from "@/components/Footer.vue";
+export default {
+  components: { Footer }
+};
+</script>
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Red+Hat+Display:wght@400;500;700&display=swap");
 

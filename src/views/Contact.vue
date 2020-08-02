@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h1>ini contact page</h1>
   </div>
 </template>
