@@ -9,7 +9,9 @@ export default new Vuex.Store({
       {
         id: 0,
         name: "Bendahara",
+        slug: "bendahara",
         image: "/post/post.jpg",
+        tools: ["vscode", "php", "mysql"],
         year: 2019,
         platform: "ui",
         desc: "Bendahara",
@@ -17,6 +19,7 @@ export default new Vuex.Store({
       {
         id: 1,
         name: "Projectsekolah!",
+        slug: "projectsekolah",
         image: "/post/psekolah.jpg",
         tools: ["vscode", "php", "mysql"],
         year: 2019,
@@ -27,6 +30,7 @@ export default new Vuex.Store({
       {
         id: 2,
         name: "bankmini",
+        slug: "bankmini",
         image: "/post/bankmini.png",
         year: 2019,
         platform: "web",
@@ -85,7 +89,9 @@ export default new Vuex.Store({
       {
         id: 0,
         name: "Bendahara",
+        slug: "bendahara",
         image: "/post/post.jpg",
+        tools: ["vscode", "php", "mysql"],
         year: 2019,
         platform: "ui",
         desc: "Bendahara",
@@ -93,6 +99,7 @@ export default new Vuex.Store({
       {
         id: 1,
         name: "Projectsekolah!",
+        slug: "projectsekolah",
         image: "/post/psekolah.jpg",
         tools: ["vscode", "php", "mysql"],
         year: 2019,
@@ -103,7 +110,9 @@ export default new Vuex.Store({
       {
         id: 2,
         name: "bankmini",
+        slug: "bankmini",
         image: "/post/bankmini.png",
+        tools: ["vscode", "php", "mysql"],
         year: 2019,
         platform: "web",
         desc: "Bankmini",

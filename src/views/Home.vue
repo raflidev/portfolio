@@ -9,51 +9,51 @@
             <h5 class="text-muted">Fullstack Web Developer</h5>
             <div class="media-sosial mt-4 pb-2">
               <a href="https://instagram.com/raflidev" target="_blank" class="pr-4">
-                <img src="@/assets/social-media/instagram.svg" width="40" />
+                <img src="@/assets/social-media/instagram.svg" class="pb-2" width="40" />
               </a>
               <a href="https://twitter.com/raflidev" target="_blank" class="pr-4">
-                <img src="@/assets/social-media/twitter.svg" width="40" />
+                <img src="@/assets/social-media/twitter.svg" class="pb-2" width="40" />
               </a>
               <a href="https://" target="_blank" class="pr-4">
-                <img src="@/assets/social-media/dribbble.svg" width="40" />
+                <img src="@/assets/social-media/dribbble.svg" class="pb-2" width="40" />
               </a>
               <a href="https://" target="_blank" class="pr-4">
-                <img src="@/assets/social-media/youtube.svg" width="40" />
+                <img src="@/assets/social-media/youtube.svg" class="pb-2" width="40" />
               </a>
               <a
                 href="https://open.spotify.com/show/5TcR4q4Gy3rplg026XGo5Q?si=xSj1CgCqShK7BtDT1gb4WA"
                 target="_blank"
                 class="pr-4"
               >
-                <img src="@/assets/social-media/spotify.svg" width="40" />
+                <img src="@/assets/social-media/spotify.svg" class="pb-2" width="40" />
               </a>
               <a href="https://github.com/raflidev" target="_blank" class="pr-4">
-                <img src="@/assets/social-media/github.svg" width="40" />
+                <img src="@/assets/social-media/github.svg" class="pb-2" width="40" />
               </a>
               <a href="https://t.me/raflidev" target="_blank" class="pr-4">
-                <img src="@/assets/social-media/telegram.svg" width="40" />
+                <img src="@/assets/social-media/telegram.svg" class="pb-2" width="40" />
               </a>
             </div>
-            <div class="action-link pt-5 mb-5">
-              <a
-                href="http://"
-                class="btn btn-dark rounded-pill py-2 mb-3 px-4 mr-4 font-weight-bolder"
-              >HIRE ME</a>
-              <a
-                href="http://"
-                class="btn btn-outline-dark rounded-pill py-2 mb-3 px-4 mr-4 font-weight-bolder"
-              >SEE MY RESUME</a>
+            <div class="action-link pt-3 mb-3">
+              <router-link
+                to="/contact"
+                class="btn btn-dark rounded-pill py-2 mb-3 px-4 mr-3 font-weight-bolder"
+              >HIRE ME</router-link>
+              <router-link
+                to="/"
+                class="btn btn-outline-dark rounded-pill py-2 mb-3 px-4 font-weight-bolder"
+              >SEE MY RESUME</router-link>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 d-none d-sm-block">
           <img src="me/home.jpg" class="img-fluid" width="500" />
         </div>
       </div>
     </div>
     <div>
       <div class="container">
-        <div class="py-4 text-center option-work">
+        <!-- <div class="py-4 text-center option-work">
           <button
             @click="$store.state.selectedCategory = 'All'"
             class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
@@ -66,21 +66,20 @@
             @click="$store.state.selectedCategory = 'ui'"
             class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
           >UI</button>
-          <!-- <button
+          <button
             @click="selectedCategory = 'desktop'"
             class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
-          >Desktop</button>-->
-        </div>
+          >Desktop</button>
+        </div>-->
         <div class="row">
           <div class="col-lg-4 col-md-6 py-4" v-for="work in home" :key="work.index">
-            <!-- {{works}} -->
             <div class="card work">
               <img v-bind:src="work.image" class="card-img-top" width="325" srcset />
               <div class="card-body py-0 pt-2">
                 <div class="info-porfolio">
-                  <a v-bind:href="'project/' + work.id" class>
+                  <router-link v-bind:to="'project/' + work.slug" class="stretched-link text-dark">
                     <span class="material-icons rounded-circle">visibility</span>
-                  </a>
+                  </router-link>
                 </div>
                 <h6
                   class="font-weight-bold mb-0 text-muted text-uppercase category"

@@ -35,9 +35,9 @@
             </li>
             <li class="nav-item">
               <router-link
-                class="btn btn-dark rounded-pill px-3"
+                class="btn nav-link btn-dark rounded-pill px-3"
                 active-class="active"
-                to="/login"
+                to="/contact"
               >HIRE ME</router-link>
             </li>
           </ul>

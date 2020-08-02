@@ -1,7 +1,7 @@
 <template>
   <div class="container mt-4">
     <h1 class="mt-5 font-weight-bold">Blog</h1>
-    <h4 class="font-weight-light">Writing and sharing</h4>
+    <h4 class="font-weight-light">sometimes i write and sharing</h4>
     <div class="row mt-5 mb-3">
       <div class="col-lg-4 col-md-6" v-for="blog in 6" :key="blog.index">
         <div class="card mb-4 border-0">

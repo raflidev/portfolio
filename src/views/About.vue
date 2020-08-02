@@ -2,7 +2,7 @@
   <div class="about">
     <div class="container pt-5">
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6 mb-5">
           <img src="me/about.jpg" width="440" class="img-fluid" />
         </div>
         <div class="col-lg-6">

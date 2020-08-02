@@ -31,9 +31,9 @@
             <img v-bind:src="work.image" class="card-img-top" width="325" srcset />
             <div class="card-body py-0 pt-2">
               <div class="info-porfolio">
-                <a v-bind:href="'project/' + work.id" class>
+                <router-link v-bind:to="'project/' + work.slug" class="stretched-link text-dark">
                   <span class="material-icons rounded-circle">visibility</span>
-                </a>
+                </router-link>
               </div>
               <h6
                 class="font-weight-bold mb-0 text-muted text-uppercase category"
