@@ -7,15 +7,21 @@
         <button
           @click="$store.state.selectedCategory = 'All'"
           class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
-        >All</button>
+        >
+          All
+        </button>
         <button
           @click="$store.state.selectedCategory = 'web'"
           class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
-        >Web</button>
+        >
+          Web
+        </button>
         <button
           @click="$store.state.selectedCategory = 'ui'"
           class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
-        >UI</button>
+        >
+          UI
+        </button>
         <!-- <button
             @click="selectedCategory = 'desktop'"
             class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
@@ -27,18 +33,30 @@
           v-for="work in filteredWork"
           :key="work.index"
         >
-          <div class="card work">
-            <img v-bind:src="work.image" class="card-img-top" width="325" srcset />
+          <div class="card work animate__animated animate__fadeIn">
+            <img
+              v-bind:src="work.image"
+              class="card-img-top"
+              width="325"
+              srcset
+            />
             <div class="card-body py-0 pt-2">
               <div class="info-porfolio">
-                <router-link v-bind:to="'project/' + work.slug" class="stretched-link text-dark">
+                <router-link
+                  v-bind:to="'project/' + work.slug"
+                  class="stretched-link text-dark"
+                >
                   <span class="material-icons rounded-circle">visibility</span>
                 </router-link>
               </div>
               <h6
                 class="font-weight-bold mb-0 text-muted text-uppercase category"
-              >{{ work.platform }}</h6>
-              <p class="font-weight-bold float-left text-uppercase">{{ work.name }}</p>
+              >
+                {{ work.platform }}
+              </h6>
+              <p class="font-weight-bold float-left text-uppercase">
+                {{ work.name }}
+              </p>
               <p class="font-weight-bold float-right">{{ work.year }}</p>
             </div>
           </div>
@@ -63,10 +81,9 @@ export default {
           return worka.platform === category;
         });
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
-<style>
-</style>
+<style></style>

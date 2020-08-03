@@ -8,6 +8,7 @@ import "jquery/dist/jquery.js";
 import "popper.js/dist/popper.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
+import "animate.css/animate.min.css";
 import store from "./store";
 
 new Vue({
