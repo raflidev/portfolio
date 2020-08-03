@@ -4,6 +4,7 @@ import Home from "../views/Home.vue";
 import ProjectID from "../views/ProjectID.vue";
 import Project from "../views/Project.vue";
 import Blog from "../views/Blog.vue";
+import BlogID from "../views/BlogID.vue";
 import Contact from "../views/Contact.vue";
 
 Vue.use(VueRouter);
@@ -34,6 +35,10 @@ const routes = [
   {
     path: "/blog",
     component: Blog,
+  },
+  {
+    path: "/blog/:slug",
+    component: BlogID,
   },
   {
     path: "/contact",

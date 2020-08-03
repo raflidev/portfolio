@@ -95,6 +95,7 @@ export default new Vuex.Store({
         id: 1,
         title: "Top 10 Javascript Library",
         slug: "top-10-javascript-library",
+        date: "",
         decs:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, tempora atque quaerat culpa minima corrupti dolor explicabo, vel totam, reiciendis provident!",
       },
@@ -102,6 +103,13 @@ export default new Vuex.Store({
         id: 2,
         title: "Why I Made a Portfolio Website",
         slug: "why-i-made-a-portfolio-website",
+        decs:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, tempora atque quaerat culpa minima corrupti dolor explicabo, vel totam, reiciendis provident!",
+      },
+      {
+        id: 3,
+        title: "Microinteraction better than UX",
+        slug: "microinteraction-better-than-ux",
         decs:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, tempora atque quaerat culpa minima corrupti dolor explicabo, vel totam, reiciendis provident!",
       },
