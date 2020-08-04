@@ -6,12 +6,7 @@
         <h4 class="font-weight-light">
           {{ getTimeBlog(blog[0].date) }}
         </h4>
-        <img
-          src="http://placehold.it/900x300"
-          class="mt-4 img-fluid"
-          alt
-          srcset
-        />
+        <img :src="blog[0].image.large" class="mt-4 img-fluid" alt srcset />
         <hr />
         <p class="text-justify">{{ blog[0].decs }}</p>
       </div>

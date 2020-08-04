@@ -85,7 +85,9 @@
           </div>
         </div>
         <div class="col-lg-6 d-none d-sm-block">
-          <img src="me/home.jpg" class="img-fluid" width="500" />
+          <ImageBlur :image="myImage.large" :thumb="myImage.thumb" />
+
+          <!-- <img src="me/home.jpg" class="img-fluid" width="500" /> -->
         </div>
       </div>
     </div>
@@ -198,13 +200,26 @@
 </template>
 <script>
 import { mapState } from "vuex";
+import { ImageBlur } from "@djanoskova/vue-image-blur";
+import "@djanoskova/vue-image-blur/public/css/imageBlur.css";
 import moment from "moment";
 export default {
   computed: mapState(["home", "blog"]),
+  data() {
+    return {
+      myImage: {
+        large: "me/home.jpg",
+        thumb: "me/home.jpg",
+      },
+    };
+  },
   methods: {
     getDate(date) {
       return moment(date).format("DD MMM");
     },
+  },
+  components: {
+    ImageBlur,
   },
 };
 </script>
@@ -231,5 +246,21 @@ export default {
 }
 .work:hover img {
   opacity: 0.3;
+}
+</style>
+
+<style scoped>
+@media only screen and (min-width: 700px) {
+  .image-blur {
+    width: 390px;
+    height: 500px;
+  }
+}
+
+@media only screen and(max-width: 700px) {
+  .image-blur {
+    width: 100%;
+    height: 300px;
+  }
 }
 </style>

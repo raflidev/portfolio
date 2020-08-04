@@ -12,7 +12,7 @@
           </p>
           <img
             class="card-img-top"
-            src="http://placehold.it/300x200"
+            :src="blog.image.thumb"
             alt="Card image cap"
           />
           <div class="card-body">

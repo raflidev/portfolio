@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div class="container pb-5">
       <h1 class="mt-5 font-weight-bold">Project</h1>
       <h4 class="font-weight-light">My best work and stuff</h4>
       <div class="py-4 text-center option-work">
@@ -34,12 +34,17 @@
           :key="work.index"
         >
           <div class="card work animate__animated animate__fadeIn">
-            <img
+            <ImageBlur
+              :image="work.image"
+              :thumb="work.image"
+              class="card-img-top"
+            />
+            <!-- <img
               v-bind:src="work.image"
               class="card-img-top"
               width="325"
               srcset
-            />
+            /> -->
             <div class="card-body py-0 pt-2">
               <div class="info-porfolio">
                 <router-link
@@ -68,6 +73,8 @@
 
 <script>
 import { mapState } from "vuex";
+import { ImageBlur } from "@djanoskova/vue-image-blur";
+import "@djanoskova/vue-image-blur/public/css/imageBlur.css";
 export default {
   computed: {
     ...mapState(["works"]),
@@ -83,7 +90,15 @@ export default {
       }
     },
   },
+  components: {
+    ImageBlur,
+  },
 };
 </script>
 
-<style></style>
+<style scoped>
+.image-blur {
+  width: 100%;
+  height: 325px;
+}
+</style>

@@ -96,6 +96,10 @@ export default new Vuex.Store({
         title: "Top 10 Javascript Library",
         slug: "top-10-javascript-library",
         date: "2020-08-03",
+        image: {
+          thumb: "https://picsum.photos/300/200",
+          large: "https://picsum.photos/900/300",
+        },
         decs:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, cumque consectetur! Nulla asperiores culpa excepturi nesciunt, adipisci quibusdam, corporis voluptates illo eos nemo cumque velit eaque voluptate architecto? Perferendis, minima. Tempora ullam, ad enim libero ut cum mollitia dolor asperiores quaerat perferendis consectetur quidem nesciunt, corporis officiis cupiditate voluptas, eum officia quam magni! Voluptas a, asperiores error dolorem odio enim laudantium quia sit blanditiis nesciunt molestias placeat ipsum pariatur nisi minima suscipit consequuntur animi sapiente quidem. Voluptate, fugiat nemo nesciunt delectus consectetur error temporibus corrupti doloribus? Itaque quia nemo a alias autem fugit similique ullam, minus quo tempore quos qui!",
       },
@@ -104,6 +108,10 @@ export default new Vuex.Store({
         title: "Why I Made a Portfolio Website",
         slug: "why-i-made-a-portfolio-website",
         date: "2020-08-03",
+        image: {
+          thumb: "https://picsum.photos/300/200",
+          large: "https://picsum.photos/900/300",
+        },
         decs:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, tempora atque quaerat culpa minima corrupti dolor explicabo, vel totam, reiciendis provident!",
       },
@@ -112,6 +120,10 @@ export default new Vuex.Store({
         title: "Microinteraction better than UX",
         slug: "microinteraction-better-than-ux",
         date: "2020-12-23",
+        image: {
+          thumb: "https://picsum.photos/300/200",
+          large: "https://picsum.photos/900/300",
+        },
         decs:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, tempora atque quaerat culpa minima corrupti dolor explicabo, vel totam, reiciendis provident!",
       },
