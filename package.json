@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@djanoskova/vue-image-blur": "^0.2.7",
     "animate.css": "^4.1.0",
     "bootstrap": "^4.5.0",
     "core-js": "^3.6.5",
