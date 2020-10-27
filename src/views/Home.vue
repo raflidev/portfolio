@@ -76,10 +76,17 @@
                 class="btn btn-dark rounded-pill py-2 mb-3 px-4 mr-3 font-weight-bolder"
                 >HIRE ME</router-link
               >
-              <router-link
-                to="/"
+              <!-- <router-link
+                to="/resume"
                 class="btn btn-outline-dark rounded-pill py-2 mb-3 px-4 font-weight-bolder"
                 >SEE MY RESUME</router-link
+              > -->
+
+              <a
+                href="/Resume.pdf"
+                target="_blank"
+                class="btn btn-outline-dark rounded-pill py-2 mb-3 px-4 font-weight-bolder"
+                >DOWNLOAD MY RESUME</a
               >
             </div>
           </div>

@@ -35,6 +35,7 @@
 <script>
 import { mapState } from "vuex";
 import moment from "moment";
+// import axios from "axios";
 export default {
   computed: {
     ...mapState(["blog"]),
@@ -44,6 +45,15 @@ export default {
       return moment(date).format("DD MMM");
     },
   },
+  // mounted() {
+  //   axios
+  //     .get(
+  //       "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40raflidev"
+  //     )
+  //     .then((res) => {
+  //       console.log(res);
+  //     });
+  // },
 };
 </script>
 
