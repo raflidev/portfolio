@@ -1,7 +1,8 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-
+import jquery from 'jquery'
+window.$ = jquery
 Vue.config.productionTip = false;
 import "material-icons/iconfont/material-icons.css";
 import "jquery/dist/jquery.js";

@@ -22,6 +22,12 @@
         >
           UI
         </button>
+        <button
+          @click="$store.state.selectedCategory = 'eksperimen'"
+          class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
+        >
+          Eksperimen
+        </button>
         <!-- <button
             @click="selectedCategory = 'desktop'"
             class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"

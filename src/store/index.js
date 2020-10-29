@@ -46,7 +46,8 @@ export default new Vuex.Store({
         tools: ["adobexd"],
         year: 2019,
         platform: "ui",
-        desc: "Bendahara",
+        desc: "Prototype ini dibuat karena saya belum bisa membuat aplikasi android. untuk kedepannya saya ingin buat aplikasi Bendahara ini web-based agar bisa mengatur keuangan di organisasi manapun.",
+        link: "https://www.instagram.com/p/B6-8bxZlOtU/"
       },
       {
         id: 1,
@@ -57,27 +58,30 @@ export default new Vuex.Store({
         year: 2019,
         platform: "web",
         desc:
-          "Aplikasi ini digunakan untuk mengabsen piket dikelas karena saya ditunjuk untuk menjadi ketua piket. Aplikasi ini juga digunakan untuk melihat jadwal pelajaran disekolah. Aplikasi ini dibuat dengan php native, mysql dan css native tanpa framework karena ini adalah project pertama saya",
+          "Aplikasi ini digunakan untuk mengabsen piket dikelas karena saya ditunjuk untuk menjadi ketua piket. Aplikasi ini juga digunakan untuk melihat jadwal pelajaran disekolah. Aplikasi ini dibuat dengan php native, mysql dan css native tanpa framework karena ini adalah project pertama saya.",
+          link: "https://github.com/raflidev/ProjectSekolah"
       },
       {
         id: 2,
         name: "bankmini",
         slug: "bankmini",
         image: "/post/bankmini.png",
-        tools: ["vscode", "php", "codeigniter", "mysql", "adobexd"],
+        tools: ["vscode", "codeigniter", "mysql", "adobexd"],
         year: 2019,
         platform: "web",
-        desc: "Bankmini",
+        desc: "Aplikasi ini dibuat untuk sertifikasi LDKS. di desain dengan Adobe XD agar lebih bagus. BANKMINI digunakan untuk menabung uang siswa di sekolah",
+        link: "https://github.com/raflidev/bankmini"
       },
       {
         id: 3,
         name: "COVID-19",
         slug: "covid19",
         image: "/post/covid19.png",
-        tools: ["vscode", "adobexd", "javascript", "nodejs", "vue"],
+        tools: ["vscode", "nodejs", "vue"],
         year: 2020,
         platform: "web",
-        desc: "COVID-19 Counter",
+        desc: "Aplikasi ini untuk melihat keadaan COVID-19 di Indonesia khususnnya. API consume, aplikasi ini dibuat dengan Vue JS dan sudah bisa PWA (Progresive Web Application)",
+        link: "https://dirumahaja.herokuapp.com"
       },
       {
         id: 4,
@@ -87,7 +91,30 @@ export default new Vuex.Store({
         tools: ["vscode", "javascript", "nodejs"],
         year: 2020,
         platform: "web",
-        desc: "Aplikasi pencari film",
+        desc: "Aplikasi mencari film untuk mencari detail dari film tersebut. Aplikasi ini digunakan untuk submisi kelas frontend di dicoding.",
+        link: "https://carifilm.herokuapp.com"
+      },
+      {
+        id: 5,
+        name: "Nyuss",
+        slug: "nyuss",
+        image: "/post/nyuss.jpg",
+        tools: ["figma"],
+        year: 2020,
+        platform: "ui",
+        desc: "Konsep Prototype UI untuk website Kafe kopi.",
+        link: "https://nyuss.netlify.app"
+      },
+      {
+        id: 6,
+        name: "Kotak IT",
+        slug: "kotak-it",
+        image: "/post/kotakit.jpg",
+        tools: ["vscode","vue"],
+        year: 2020,
+        platform: "eksperimen",
+        desc: "Kotak IT adalah podcast yang saya buat sendiri dengan konten obrolan seputar IT dan berita IT terkini.",
+        link: "https://kotakitpodcast.xyz"
       },
     ],
     blog: [

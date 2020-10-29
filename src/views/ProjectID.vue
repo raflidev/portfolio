@@ -23,9 +23,11 @@
                 class="mr-3"
               />
             </div>
+            <h5 class="font-weight-bold mt-3">Link</h5>
+            <a :href="workFiltered[0].link" target="_blank">{{workFiltered[0].link}}</a>
           </div>
-
           <p class="text-justify">{{workFiltered[0].desc}}</p>
+
         </div>
       </div>
     </div>
