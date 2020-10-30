@@ -6,7 +6,7 @@
           <div class="text-redhat">
             <h2 class="text-muted font-weight-light">Hello, I'm</h2>
             <h1 class="font-weight-bolder">Rafli Ramadhan</h1>
-            <h5 class="text-muted">Fullstack Web Developer</h5>
+            <h5 class="text-muted">Frontend Web Developer</h5>
             <div class="media-sosial mt-4 pb-2">
               <a
                 href="https://instagram.com/raflidev"

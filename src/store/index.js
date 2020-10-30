@@ -46,7 +46,7 @@ export default new Vuex.Store({
         tools: ["adobexd"],
         year: 2019,
         platform: "ui",
-        desc: "Prototype ini dibuat karena saya belum bisa membuat aplikasi android. untuk kedepannya saya ingin buat aplikasi Bendahara ini web-based agar bisa mengatur keuangan di organisasi manapun.",
+        desc: "This prototype was created because I couldn't make an Android application yet. In the future, I want to make this Bendahara application web-based so that they can manage finances in any organization.",
         link: "https://www.instagram.com/p/B6-8bxZlOtU/"
       },
       {
@@ -58,7 +58,7 @@ export default new Vuex.Store({
         year: 2019,
         platform: "web",
         desc:
-          "Aplikasi ini digunakan untuk mengabsen piket dikelas karena saya ditunjuk untuk menjadi ketua piket. Aplikasi ini juga digunakan untuk melihat jadwal pelajaran disekolah. Aplikasi ini dibuat dengan php native, mysql dan css native tanpa framework karena ini adalah project pertama saya.",
+          "This application is used to attend picket in class because I was appointed to be the picket chairman. This application is also used to view lesson schedules at school. This application is made with native php, mysql and native css without a framework because this is my first project.",
           link: "https://github.com/raflidev/ProjectSekolah"
       },
       {
@@ -69,7 +69,7 @@ export default new Vuex.Store({
         tools: ["vscode", "codeigniter", "mysql", "adobexd"],
         year: 2019,
         platform: "web",
-        desc: "Aplikasi ini dibuat untuk sertifikasi LDKS. di desain dengan Adobe XD agar lebih bagus. BANKMINI digunakan untuk menabung uang siswa di sekolah",
+        desc: "This application is made for the LSP certification held by BNSP. designed with Adobe XD to make it better. BANKMINI is used to save money for students at school",
         link: "https://github.com/raflidev/bankmini"
       },
       {
@@ -80,7 +80,7 @@ export default new Vuex.Store({
         tools: ["vscode", "nodejs", "vue"],
         year: 2020,
         platform: "web",
-        desc: "Aplikasi ini untuk melihat keadaan COVID-19 di Indonesia khususnnya. API consume, aplikasi ini dibuat dengan Vue JS dan sudah bisa PWA (Progresive Web Application)",
+        desc: "This application is to see the state of COVID-19 in Indonesia specifically. This application consumes API from government, this application is made with Vue JS and can be PWA (Progresive Web Application)",
         link: "https://dirumahaja.herokuapp.com"
       },
       {
@@ -91,7 +91,7 @@ export default new Vuex.Store({
         tools: ["vscode", "javascript", "nodejs"],
         year: 2020,
         platform: "web",
-        desc: "Aplikasi mencari film untuk mencari detail dari film tersebut. Aplikasi ini digunakan untuk submisi kelas frontend di dicoding.",
+        desc: "Application searches for movies to find details of the film. This application is used for frontend class submission in Dicoding.",
         link: "https://carifilm.herokuapp.com"
       },
       {
@@ -102,7 +102,7 @@ export default new Vuex.Store({
         tools: ["figma"],
         year: 2020,
         platform: "ui",
-        desc: "Konsep Prototype UI untuk website Kafe kopi.",
+        desc: "Prototype UI concept for Coffee cafe website.",
         link: "https://nyuss.netlify.app"
       },
       {
@@ -113,7 +113,7 @@ export default new Vuex.Store({
         tools: ["vscode","vue"],
         year: 2020,
         platform: "eksperimen",
-        desc: "Kotak IT adalah podcast yang saya buat sendiri dengan konten obrolan seputar IT dan berita IT terkini.",
+        desc: "KotakIT is a podcast that I created myself with chat content about IT and the latest IT news.",
         link: "https://kotakitpodcast.xyz"
       },
     ],
@@ -128,7 +128,7 @@ export default new Vuex.Store({
           large: "https://picsum.photos/900/300",
         },
         decs:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, cumque consectetur! Nulla asperiores culpa excepturi nesciunt, adipisci quibusdam, corporis voluptates illo eos nemo cumque velit eaque voluptate architecto? Perferendis, minima. Tempora ullam, ad enim libero ut cum mollitia dolor asperiores quaerat perferendis consectetur quidem nesciunt, corporis officiis cupiditate voluptas, eum officia quam magni! Voluptas a, asperiores error dolorem odio enim laudantium quia sit blanditiis nesciunt molestias placeat ipsum pariatur nisi minima suscipit consequuntur animi sapiente quidem. Voluptate, fugiat nemo nesciunt delectus consectetur error temporibus corrupti doloribus? Itaque quia nemo a alias autem fugit similique ullam, minus quo tempore quos qui!",
+          "Lorem <p>ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, cumque consectetur! Nulla asperiores culpa excepturi nesciunt, adipisci quibusdam, corporis voluptates illo eos nemo cumque velit eaque voluptate architecto? Perferendis, minima. Tempora ullam, ad enim libero ut cum mollitia dolor asperiores quaerat perferendis consectetur quidem nesciunt, corporis officiis cupiditate voluptas, eum officia quam magni! Voluptas a, asperiores error dolorem odio enim laudantium quia sit blanditiis nesciunt molestias placeat ipsum pariatur nisi minima suscipit consequuntur animi sapiente quidem. Voluptate, fugiat nemo nesciunt delectus consectetur error temporibus corrupti doloribus? Itaque quia nemo a alias autem fugit similique ullam, minus quo tempore quos qui!</p>",
       },
       {
         id: 2,

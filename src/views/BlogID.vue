@@ -8,7 +8,9 @@
         </h4>
         <img :src="blog[0].image.large" class="mt-4 img-fluid" alt srcset />
         <hr />
-        <p class="text-justify">{{ blog[0].decs }}</p>
+        <p class="text-justify">
+          <span v-html="blog[0].decs"></span>
+        </p>
       </div>
     </div>
   </div>

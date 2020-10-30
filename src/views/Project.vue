@@ -6,25 +6,25 @@
       <div class="py-4 text-center option-work">
         <button
           @click="$store.state.selectedCategory = 'All'"
-          class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
+          class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill mb-2"
         >
           All
         </button>
         <button
           @click="$store.state.selectedCategory = 'web'"
-          class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
+          class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill mb-2"
         >
           Web
         </button>
         <button
           @click="$store.state.selectedCategory = 'ui'"
-          class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
+          class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill mb-2"
         >
           UI
         </button>
         <button
           @click="$store.state.selectedCategory = 'eksperimen'"
-          class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
+          class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill mb-2"
         >
           Eksperimen
         </button>

@@ -26,18 +26,14 @@
             placeholder="Type your request.."
           />
         </div>
-        <button class="btn btn-lg font-weight-bold px-5 float-right btn-dark rounded-pill">SEND!</button>
+        <a :href="'mailto:test@example.com'" class="btn btn-lg font-weight-bold px-5 float-right btn-dark rounded-pill">SEND!</a>
       </div>
       <div class="col-lg-6 d-none d-sm-block">
-        <img src="/me/home.jpg" class="img-fluid" alt srcset />
+        <img src="/me/home.jpg" class="img-fluid animate__animated animate__fadeIn" alt srcset />
       </div>
     </div>
   </div>
 </template>
-
-<script>
-export default {};
-</script>
 
 <style>
 </style>
