@@ -18,11 +18,11 @@
           <div class="card-body">
             <h3 class="card-title font-weight-bold">{{ blog.title }}</h3>
             <p class="card-text font-weight-light mb-0">
-             <span v-html="blog.decs.substring(0, 100)"></span>
+              <span v-html="blog.decs.substring(0, 100) + '...'"></span>
             </p>
             <router-link
               :to="'/blog/' + blog.slug"
-              class="my-3 font-14 btn btn-outline-dark rounded-pill text-uppercase font-weight-bold"
+              class="my-3 font-14 btn btn-outline-dark rounded-pill text-uppercase font-weight-bold stretched-link"
               >Read More</router-link
             >
           </div>
