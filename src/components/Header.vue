@@ -28,6 +28,11 @@
           >
         </li>
         <li class="nav-item">
+          <router-link class="nav-link" active-class="active" to="/certificate"
+            >CERTIFICATE</router-link
+          >
+        </li>
+        <li class="nav-item">
           <router-link class="nav-link" active-class="active" to="/about"
             >ABOUT ME</router-link
           >

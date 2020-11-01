@@ -6,6 +6,7 @@ import Project from "../views/Project.vue";
 import Blog from "../views/Blog.vue";
 import BlogID from "../views/BlogID.vue";
 import Contact from "../views/Contact.vue";
+import Cert from "../views/Cert.vue";
 
 Vue.use(VueRouter);
 
@@ -31,6 +32,10 @@ const routes = [
   {
     path: "/project/",
     component: Project,
+  },
+  {
+    path: "/certificate/",
+    component: Cert,
   },
   {
     path: "/blog",

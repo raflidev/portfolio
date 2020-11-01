@@ -1,29 +1,19 @@
 <template>
   <div class="container mt-4">
-    <h1 class="mt-5 font-weight-bold">Blog</h1>
-    <h4 class="font-weight-light">sometimes i write and sharing</h4>
+    <h1 class="mt-5 font-weight-bold">Certificate</h1>
+    <h4 class="font-weight-light">my certificate collection</h4>
     <div class="row mt-5 mb-3">
       <div class="col-lg-4 col-md-6" v-for="blog in blog" :key="blog.index">
         <div class="card mb-4 border-0">
-          <p
-            class="position-absolute text-center bg-dark text-white p-3 font-weight-bold"
-          >
-            {{ getDate(blog.date) }}
-          </p>
-          <img
-            class="card-img-top"
-            :src="blog.image.thumb"
-            alt="Card image cap"
-          />
           <div class="card-body">
             <h3 class="card-title font-weight-bold">{{ blog.title }}</h3>
             <p class="card-text font-weight-light mb-0">
-             <span v-html="blog.decs.substring(0, 100)"></span>
+             
             </p>
-            <router-link
-              :to="'/blog/' + blog.slug"
+            <a
+              :href="blog"
               class="my-3 font-14 btn btn-outline-dark rounded-pill text-uppercase font-weight-bold"
-              >Read More</router-link
+              >See credential</a
             >
           </div>
         </div>
@@ -45,15 +35,6 @@ export default {
       return moment(date).format("DD MMM");
     },
   },
-  // mounted() {
-  //   axios
-  //     .get(
-  //       "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40raflidev"
-  //     )
-  //     .then((res) => {
-  //       console.log(res);
-  //     });
-  // },
 };
 </script>
 

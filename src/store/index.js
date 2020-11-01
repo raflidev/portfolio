@@ -112,8 +112,8 @@ export default new Vuex.Store({
         image: "/post/kotakit.jpg",
         tools: ["vscode","vue"],
         year: 2020,
-        platform: "eksperimen",
-        desc: "KotakIT is a podcast that I created myself with chat content about IT and the latest IT news.",
+        platform: "experiment",
+        desc: "Kotak IT is a podcast that I created myself with chat content about IT and the latest IT news.",
         link: "https://kotakitpodcast.xyz"
       },
     ],

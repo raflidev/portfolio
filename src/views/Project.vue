@@ -23,10 +23,10 @@
           UI
         </button>
         <button
-          @click="$store.state.selectedCategory = 'eksperimen'"
+          @click="$store.state.selectedCategory = 'experiment'"
           class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill mb-2"
         >
-          Eksperimen
+          Experiment
         </button>
         <!-- <button
             @click="selectedCategory = 'desktop'"
