@@ -1,5 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import axios from 'axios';
+
 
 Vue.use(Vuex);
 
@@ -168,6 +170,7 @@ export default new Vuex.Store({
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, tempora atque quaerat culpa minima corrupti dolor explicabo, vel totam, reiciendis provident!",
       },
     ],
+    medium: [],
     cert: [
       {
         title: "Belajar Membuat Aplikasi Android untuk Pemula",
@@ -202,7 +205,17 @@ export default new Vuex.Store({
     ],
     selectedCategory: "All",
   },
-  mutations: {},
-  actions: {},
+  mutations: {
+    SET_MEDIUM(state, medium) {
+      state.medium = medium
+    }
+  },
+  actions: {
+    getMedium({ commit }) {
+      axios.get("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40raflidev").then(res => {
+        commit('SET_MEDIUM', res.data)
+      })
+    }
+  },
   modules: {},
 });

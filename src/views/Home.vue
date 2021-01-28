@@ -176,27 +176,24 @@
         Sometimes i write and sharing
       </h4>
       <div class="row mt-5 mb-3">
-        <div class="col-lg-4 col-md-6" v-for="blog in blog" :key="blog.index">
-          <div class="card mb-4 border-0 animate__animated animate__fadeIn">
+        <div class="col-lg-4 col-md-6" v-for="(medium,index) in medium.items" :key="medium.index">
+           <div class="card mb-4 border-0 animate__animated animate__fadeIn" v-if="index < 3 ">
             <p
               class="position-absolute text-center bg-dark text-white p-3 font-weight-bold"
             >
-              {{ getDate(blog.date) }}
+              {{ getDate(medium.pubDate) }}
             </p>
             <img
               class="card-img-top"
-              src="http://placehold.it/300x200"
+              :src="medium.thumbnail"
               alt="Card image cap"
             />
             <div class="card-body">
-              <h3 class="card-title font-weight-bold">{{ blog.title }}</h3>
-              <p class="card-text font-weight-light mb-0">
-                {{ blog.decs.substring(0, 100) }}...
-              </p>
-              <router-link
-                :to="'/blog/' + blog.slug"
+              <h3 class="card-title font-weight-bold" style="min-height:100px">{{ medium.title }}</h3>
+              <a target="_blank"
+                :href="medium.link"
                 class="my-3 font-14 btn btn-outline-dark rounded-pill text-uppercase font-weight-bold"
-                >Read More</router-link
+                >Read More</a
               >
             </div>
           </div>
@@ -211,7 +208,7 @@ import { ImageBlur } from "@djanoskova/vue-image-blur";
 import "@djanoskova/vue-image-blur/public/css/imageBlur.css";
 import moment from "moment";
 export default {
-  computed: mapState(["home", "blog"]),
+  computed: mapState(["home","medium"]),
   data() {
     return {
       myImage: {
@@ -219,6 +216,9 @@ export default {
         thumb: "me/home.jpg",
       },
     };
+  },
+  mounted(){
+    this.$store.dispatch("getMedium");
   },
   methods: {
     getDate(date) {
