@@ -212,7 +212,7 @@ export default new Vuex.Store({
   },
   actions: {
     getMedium({ commit }) {
-      axios.get("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40raflidev").then(res => {
+      axios.get("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fkotak-it").then(res => {
         commit('SET_MEDIUM', res.data)
       })
     }
