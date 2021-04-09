@@ -30,9 +30,6 @@
                   width="40"
                 />
               </a>
-              <!-- <a href="https://" target="_blank" class="pr-4">
-                <img src="@/assets/social-media/dribbble.svg" class="pb-2" width="40" />
-              </a>-->
               <a href="https://" target="_blank" class="pr-4">
                 <img
                   src="@/assets/social-media/youtube.svg"
@@ -76,11 +73,6 @@
                 class="btn btn-dark rounded-pill py-2 mb-3 px-4 mr-3 font-weight-bolder"
                 >HIRE ME</router-link
               >
-              <!-- <router-link
-                to="/resume"
-                class="btn btn-outline-dark rounded-pill py-2 mb-3 px-4 font-weight-bolder"
-                >SEE MY RESUME</router-link
-              > -->
 
               <a
                 href="/Rafli_Resume.pdf"
@@ -93,31 +85,11 @@
         </div>
         <div class="col-lg-6 d-none d-sm-block">
           <ImageBlur :image="myImage.large" :thumb="myImage.thumb" />
-
-          <!-- <img src="me/home.jpg" class="img-fluid" width="500" /> -->
         </div>
       </div>
     </div>
     <div>
       <div class="container">
-        <!-- <div class="py-4 text-center option-work">
-          <button
-            @click="$store.state.selectedCategory = 'All'"
-            class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
-          >All</button>
-          <button
-            @click="$store.state.selectedCategory = 'web'"
-            class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
-          >Web</button>
-          <button
-            @click="$store.state.selectedCategory = 'ui'"
-            class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
-          >UI</button>
-          <button
-            @click="selectedCategory = 'desktop'"
-            class="btn btn-outline-dark text-uppercase font-weight-bold mr-3 rounded-pill"
-          >Desktop</button>
-        </div>-->
         <div class="row">
           <div
             class="col-lg-4 col-md-6 py-4"
@@ -156,10 +128,6 @@
           </div>
         </div>
         <div class="text-center">
-          <!-- <button
-            @click="showWork += 5"
-            class="my-3 font-14 btn btn-outline-dark rounded-pill text-uppercase font-weight-bold"
-          >Load more work</button>-->
 
           <router-link
             to="/project"
