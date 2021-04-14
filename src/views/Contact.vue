@@ -28,6 +28,7 @@
           <div class="mb-3">
             <h5 class="font-weight-bold">Request</h5>
             <textarea
+              type="request"
               v-model="mail"
               class="form-control rounded py-2"
               placeholder="Type your request.."
@@ -36,8 +37,8 @@
             />
           </div>
         </div>
-        <div v-if="mail != ''">
-          <button type="submit" class="btn btn-lg font-weight-bold px-5 float-right btn-dark rounded-pill">SEND!</button>
+        <div v-if="mail != '' && name != '' && email != '' ">
+          <button type="submit" @click="successContactForm()" class="btn btn-lg font-weight-bold px-5 float-right btn-dark rounded-pill">SEND!</button>
         </div>
         <div v-else>
           <button class="btn btn-lg font-weight-bold px-5 float-right btn-dark rounded-pill disabled" aria-disabled="true">SEND!</button>
@@ -61,6 +62,13 @@ export default {
       mail:"",
       name:"",
       email:"",
+    }
+  },
+  methods:{
+    successContactForm(){
+      this.mail = ''
+      this.name = ''
+      this.email = ''
     }
   },
   mounted(){
