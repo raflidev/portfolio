@@ -26,7 +26,7 @@ export default () => ({
         },
         {
           id: 2,
-          name: "bankmini",
+          name: "Bankmini",
           slug: "bankmini",
           image: "/post/bankmini.png",
           tools: ["vscode", "codeigniter", "mysql", "adobexd"],

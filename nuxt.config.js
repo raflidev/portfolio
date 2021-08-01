@@ -24,12 +24,13 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    { src: '~assets/style.css', lang: 'css' }
+    { src: '~assets/style.css', lang: 'css' },
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/owl.js', mode: 'client' },
+    { src: '~/plugins/pdf.js', mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -45,6 +46,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    ['vue-scrollto/nuxt', { duration: 800 }],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
