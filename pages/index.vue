@@ -135,7 +135,7 @@
       <section id="modal" class="fixed inset-0 flex items-center justify-center mt-12 z-20" :class="{'opacity-100': toggleModal, 'hidden opacity-0': !toggleModal }">
         <div class="relative animate__animated animate__fadeIn bg-gray-100 w-4/5 flex justify-center">
           <div class="absolute top-5 lg:-top-8 right-5 lg:right-0">
-            <button @click="toggleModal = !toggleModal, workIndex = null">
+            <button @click="toggleModal = !toggleModal, workIndex = null, certIndex =  null">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
@@ -233,7 +233,7 @@
                 <div class="absolute top-0 w-full h-full opacity-0 hover:opacity-100 hover:bg-gray-100 hover:bg-opacity-50 items-center flex flex-col justify-center space-y-3">
                   <p class="font-bold text-xl text-center">{{cert.title}}</p>
                   <div class="flex space-x-2">
-                    <button class="hover:bg-green-700 hover:text-white p-1 rounded-2xl" @click="toggleModal = !toggleModal, certIndexs = index">
+                    <button class="hover:bg-green-700 hover:text-white p-1 rounded-2xl" @click="toggleModal = !toggleModal, certIndex = index">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
@@ -282,8 +282,31 @@
         </div>
       </section>
 
-      <section class="mt-40">
-        footer
+      <section class="mt-32 bg-gray-100">
+        <div class="flex justify-center">
+          <div class="w-1/2 py-10 flex justify-between items-center">
+            <div class="space-y-2">
+              <h1 class="text-2xl font-bold uppercase">raflidev</h1> 
+              <div>
+                <p class="text-sm">rafliramdhn@gmail.com</p>
+                <p class="text-sm">+62 812 888 2526 3</p>
+              </div>
+              <div>
+                <p class="text-sm">Copyright &copy; 2019 - {{ new Date().getFullYear() }}</p>
+              </div>
+            </div>
+            <div>
+              <button class="flex flex-col items-center bg-green-600 text-white p-2 rounded" v-scroll-to="'#landing'">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
+                </svg>
+                <p class="text-xs">
+                  To Top
+                </p>
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   </div>
