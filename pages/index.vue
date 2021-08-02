@@ -54,6 +54,7 @@
           <h1 class="text-center font-bold text-3xl mb-6">About me</h1>
           <div class="flex justify-center">
             <div class="w-3/5 space-y-6"> 
+              <img src="/me/about.jpg" class="inline lg:hidden rounded animate__animated animate__fadeIn" alt="" srcset="">
               <div class="block">
                 Hello I'm Rafli!
               </div>
