@@ -11,11 +11,22 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'description', content: 'I am Rafli, a Web Frontend Developer. This is my portfolio and learning progress I put together on this website' },
+      { name: 'description', content: 'I am Rafli, a Frontend Web Developer. This is my portfolio and learning progress I put together on this website' },
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'author', content: 'Muhammad Rafli Ramadhan' },
       { name: 'keywords', content: 'Web Developer, Web Designer, Web Frontend Developer' },
-      { name: 'image', content: '/logo.jpg' },
+
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://raflidev.netlify.app/' },
+      { property: 'og:title', content: 'Muhammad Rafli Ramadhan - Frontend Web Developer' },
+      { property: 'og:description', content: 'I am Rafli, a Frontend Web Developer. This is my portfolio and learning progress I put together on this website' },
+      { property: 'og:image', content: 'https://raflidev.netlify.app/logo.jpg' },
+      
+      { property: 'twitter:card', content: 'summary_large_image' },
+      { property: 'twitter:url', content: 'https://raflidev.netlify.app/' },
+      { property: 'twitter:title', content: 'Muhammad Rafli Ramadhan - Frontend Web Developer' },
+      { property: 'twitter:description', content: 'I am Rafli, a Frontend Web Developer. This is my portfolio and learning progress I put together on this website' },
+      { property: 'twitter:image', content: 'https://raflidev.netlify.app/logo.jpg' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
