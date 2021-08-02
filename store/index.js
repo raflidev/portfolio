@@ -1,4 +1,5 @@
-export default () => ({
+import axios from 'axios';
+export const state = () => ({
       works: [
         {
           id: 0,
@@ -84,52 +85,6 @@ export default () => ({
           link: "https://kotakitpodcast.xyz",
         },
       ],
-      blog: [
-        {
-          id: 1,
-          title: "Top 10 Javascript Library",
-          slug: "top-10-javascript-library",
-          date: "2020-08-03",
-          image: {
-            thumb: "https://picsum.photos/300/200",
-            large: "https://picsum.photos/900/300",
-          },
-          decs:
-            "Lorem <p>ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, cumque consectetur! Nulla asperiores culpa excepturi nesciunt, adipisci quibusdam, corporis voluptates illo eos nemo cumque velit eaque voluptate architecto? Perferendis, minima. Tempora ullam, ad enim libero ut cum mollitia dolor asperiores quaerat perferendis consectetur quidem nesciunt, corporis officiis cupiditate voluptas, eum officia quam magni! Voluptas a, asperiores error dolorem odio enim laudantium quia sit blanditiis nesciunt molestias placeat ipsum pariatur nisi minima suscipit consequuntur animi sapiente quidem. Voluptate, fugiat nemo nesciunt delectus consectetur error temporibus corrupti doloribus? Itaque quia nemo a alias autem fugit similique ullam, minus quo tempore quos qui!</p>",
-        },
-        {
-          id: 2,
-          title: "Why I Made a Portfolio Website",
-          slug: "why-i-made-a-portfolio-website",
-          date: "2020-08-03",
-          image: {
-            thumb: "https://picsum.photos/300/200",
-            large: "https://picsum.photos/900/300",
-          },
-          decs: `First of all, everyone has to work, they make a portfolio in microsoft word and it's not that interesting. therefore. I'll explain why I created a portfolio website
-          <h4 class="font-weight-bold pt-4">Get them interested</h4>
-            A website has visuals that we can customize ourselves so that clients can see our creativity.
-            <h4 class="font-weight-bold pt-4">A place to put the project</h4>
-            
-            we can place our best projects and clients will self-assess the results of the projects we make.
-            <h4 class="font-weight-bold pt-4">World wide web</h4>
-            
-            because we use web technology, it will certainly be seen by everyone in the world, the portfolio is a place to show off our skills, in order to get clients that match our skills.
-         `,
-        },
-        {
-          id: 3,
-          title: "Microinteraction better than UX",
-          slug: "microinteraction-better-than-ux",
-          date: "2020-12-23",
-          image: {
-            thumb: "https://picsum.photos/300/200",
-            large: "https://picsum.photos/900/300",
-          },
-          decs:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, tempora atque quaerat culpa minima corrupti dolor explicabo, vel totam, reiciendis provident!",
-        },
-      ],
       medium: [],
       cert: [
         {
@@ -165,3 +120,17 @@ export default () => ({
       ],
       selectedCategory: "All",
 })
+
+export const mutations = {
+  SET_MEDIUM(state, medium) {
+    state.medium = medium
+  }
+}
+
+export const actions = {
+  getMedium({ commit }) {
+    axios.get("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fkotak-it").then(res => {
+      commit('SET_MEDIUM', res.data)
+    })
+  }
+}
