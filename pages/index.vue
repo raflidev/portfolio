@@ -136,7 +136,7 @@
       <section id="modal" class="fixed inset-0 flex items-center justify-center mt-12 z-20" :class="{'opacity-100': toggleModal, 'hidden opacity-0': !toggleModal }">
         <div class="relative animate__animated animate__fadeIn bg-gray-100 w-4/5 flex justify-center">
           <div class="absolute top-5 lg:-top-8 right-5 lg:right-0">
-            <button @click="toggleModal = !toggleModal, workIndex = null, certIndex =  null">
+            <button class="hover:text-red-700 rounded-xl hover:bg-red-100" @click="toggleModal = !toggleModal, workIndex = null, certIndex =  null">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
@@ -167,7 +167,7 @@
               </div>
             </div>
             <div v-if="certIndex != null" class="flex justify-center lg:justify-between space-x-0 lg:space-x-10">
-              <img :src="'/cert/'+cert[certIndex].credential+'.png'" class="animate__animated animate__fadeIn hidden lg:inline object-cover w-5/12" alt="">
+              <img :src="'/cert/'+cert[certIndex].credential+'.jpg'" class="animate__animated animate__fadeIn hidden lg:inline object-cover w-5/12" alt="">
               <div class="px-8 lg:px-0 w-full lg:w-7/12 space-y-3">
                 <div>
                   <h1 class="font-bold text-3xl">
@@ -207,7 +207,7 @@
           <div class="px-4 lg:px-0 grid grid-cols-1 lg:grid-cols-2 gap-4" v-if="showcerti">
             <div v-for="(cert, index) in cert" :key="cert.index">
               <div class="relative animate__animated animate__fadeIn" v-if="index < 4">
-                <img :src="'/cert/'+cert.credential+'.png'" :alt="cert.credential">
+                <img :src="'/cert/'+cert.credential+'.jpg'" :alt="cert.credential">
                 <div class="absolute top-0 w-full h-full opacity-0 hover:opacity-100 hover:bg-gray-100 hover:bg-opacity-50 items-center flex flex-col justify-center space-y-3">
                   <p class="font-bold text-xl text-center">{{cert.title}}</p>
                   <div class="flex space-x-2">
@@ -230,7 +230,7 @@
           <div class="px-4 lg:px-0 grid grid-cols-1 lg:grid-cols-2 gap-4" v-else>
             <div v-for="(cert, index) in cert" :key="cert.index">
               <div class="relative animate__animated animate__fadeIn">
-                <img :src="'/cert/'+cert.credential+'.png'" :alt="cert.credential" srcset="">
+                <img :src="'/cert/'+cert.credential+'.jpg'" :alt="cert.credential" srcset="">
                 <div class="absolute top-0 w-full h-full opacity-0 hover:opacity-100 hover:bg-gray-100 hover:bg-opacity-50 items-center flex flex-col justify-center space-y-3">
                   <p class="font-bold text-xl text-center">{{cert.title}}</p>
                   <div class="flex space-x-2">
@@ -284,8 +284,8 @@
       </section>
 
       <section class="mt-32 bg-gray-100">
-        <div class="flex justify-center">
-          <div class="w-1/2 py-10 flex justify-between items-center">
+        <div class="flex justify-center px-4 lg:px-0">
+          <div class="w-full lg:w-1/2 py-10 flex justify-between items-center">
             <div class="space-y-2">
               <h1 class="text-2xl font-bold uppercase">raflidev</h1> 
               <div>
