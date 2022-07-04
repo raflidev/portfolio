@@ -44,7 +44,12 @@
             <button @click="hire" class="px-8 py-2 rounded-md bg-green-400 font-medium hover:text-white hover:bg-green-600">HIRE ME</button>
           </div>
           <div class="hidden lg:inline animate__animated animate__fadeIn w-1/2">
-            <img src="/me/home.jpg" class="rounded" alt="raflidev">
+          <div class="relative">
+            <img src="/me/home.png" class="relative z-10 rounded-full" alt="raflidev">
+            <div class="absolute top-10 h-1/2 w-1/2 bg-green-600 rounded-full "></div>
+            <div class="absolute bottom-10 right-0 h-2/6 w-2/6 border-dashed border-2 border-green-600 rounded-full"></div>
+            <div class="absolute top-20 right-16 h-1/6 w-1/6 border-dotted border-2 border-green-600"></div>
+          </div>
           </div>
         </div>
       </section>
@@ -53,24 +58,14 @@
         <div class="bg-green-600 py-10 text-white">
           <h1 class="text-center font-bold text-3xl mb-6">About me</h1>
           <div class="flex justify-center">
-            <div class="w-3/5 space-y-6"> 
-              <img src="/me/about.jpg" class="inline lg:hidden rounded animate__animated animate__fadeIn" alt="" srcset="">
+            <div class="w-3/5 space-y-4 text-center py-10 text-lg"> 
               <div class="block">
                 Hello I'm Rafli!
               </div>
               <div class="block">
-                I'm a B.Sc. Computer Science candidate at Telkom University who love to spend time learning new things.
+                I'm a B.Sc. Computer Science candidate at Telkom University who a person who has interest in programming, likes to learn new things and make things from
+                hobbies. I also like to make blog about web development when I have free time. To help others and improve my skills.
               </div>
-              <div class="block">
-                Now I'm focuses on learning web-based hybrid programming that can be accessed on desktop and android.
-              </div>
-              <div class="block">
-                My work that you see is my learning progress.
-              </div>
-              <div class="block">
-                I like to make blog and share content on Instagram and the media and also like to create innovations and ideas that I like.
-              </div>
-
             </div>
           </div>
         </div>
