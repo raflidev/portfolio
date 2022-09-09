@@ -21,7 +21,7 @@ export default {
       { property: 'og:title', content: 'Muhammad Rafli Ramadhan - Frontend Web Developer' },
       { property: 'og:description', content: 'I am Rafli, a Frontend Web Developer. This is my portfolio and learning progress I put together on this website' },
       { property: 'og:image', content: 'https://raflidev.netlify.app/logo.jpg' },
-      
+
       { property: 'twitter:card', content: 'summary_large_image' },
       { property: 'twitter:url', content: 'https://raflidev.netlify.app/' },
       { property: 'twitter:title', content: 'Muhammad Rafli Ramadhan - Frontend Web Developer' },
@@ -61,6 +61,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     ['vue-scrollto/nuxt', { duration: 800 }],
+    '@nuxtjs/google-analytics',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -68,5 +69,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  googleAnalytics: {
+    id: 'G-Z4DPKJZL19'
   }
 }
