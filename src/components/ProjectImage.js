@@ -50,7 +50,7 @@ function ProjectImage(props) {
             </div>
           </div>
         )} 
-      <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className={"group-hover:grayscale group-hover:blur-[2px] relative z-10 w-full h-[36rem] bg-red-100 bg-cover bg-start  duration-300"} style={{backgroundImage:`url(${props.image})`}}>
+      <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className={"group-hover:grayscale group-hover:blur-[2px] relative z-10 w-full h-[50rem] bg-red-100 bg-cover bg-start  duration-300"} style={{backgroundImage:`url(${props.image})`}}>
       </div>   
 
     </div>
