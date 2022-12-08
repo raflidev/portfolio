@@ -8,6 +8,7 @@ import ProjectImage from './components/ProjectImage';
 import data from './assets/project';
 
 import certi from "./assets/certificate"
+import BlogImage from './components/BlogImage';
 
 function App() {
   return (
@@ -130,7 +131,7 @@ function App() {
                 {
                   data.map((item, index) => {
                     return (
-                      <ProjectImage image={item.image} name={item.name} deskripsi={item.deskripsi} language={item.language} key={item.id} />
+                      <ProjectImage image={item.image} name={item.name} deskripsi={item.deskripsi} language={item.language} key={index} />
                     )
                   }, [])}
               </div>
@@ -162,12 +163,12 @@ function App() {
           <div className='relative z-20'>
             <div className='text-6xl font-bold py-5 pt-12'>Certificate</div>
             <div className='text-xl font-medium pt-2 pb-10'>My Competency Certificate</div>
-            <div className="grid max-md:grid-cols-1 max-lg:grid-cols-2 grid-cols-3 gap-4">
+            <div className="grid max-md:grid-cols-1 max-lg:grid-cols-2 grid-cols-2 gap-4">
               {
                 
                 certi.map((item, index) => {
                 return (
-                    <img src={item.image} alt="" />
+                    <img src={item.image} key={index} alt="" />
                 )
               }, [])}
             </div>
@@ -178,29 +179,11 @@ function App() {
           <div className='text-6xl font-bold py-5 pt-12'>Blog</div>
           <div className='text-xl font-medium pt-2 pb-10'>Sometimes i write and sharing</div>
           <div className='flex w-full'>
-            <div className='grid grid-cols-1 lg:grid-cols-2 w-full gap-4'>
-              <div className='relative'>
-                <div className='w-full h-[30rem] bg-red-100' style={{backgroundImage: "url('https://picsum.photos/600/600')"}}>
-                </div>
-                <div className='absolute text-white bottom-10 px-10  w-full h-5/12'>
-                  <div className='flex w-5/6'>
-                    <div className='space-y-2'>
-                      <div className='font-medium text-xl'>
-                        Install dan implementasi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, doloremque.
-                      </div>
-                      <div>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam dolores, eius adipisci quis officiis temporibus deleniti sunt, quam molestiae nobis amet cumque sequi voluptas odio placeat culpa? Amet repellendus nisi quaerat repudiandae. Autem, id et? Rem corporis labore porro veniam pariatur, asperiores adipisci veritatis omnis laboriosam, repudiandae recusandae harum aut.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='w-full h-[30rem] bg-red-100' style={{backgroundImage: "url('https://picsum.photos/600/600')"}}>
-              </div>
-              <div className='w-full h-[30rem] bg-red-100' style={{backgroundImage: "url('https://picsum.photos/600/600')"}}>
-              </div>
-              <div className='w-full h-[30rem] bg-red-100' style={{backgroundImage: "url('https://picsum.photos/600/600')"}}>
-              </div>
+            <div className='grid grid-cols-1 lg:grid-cols-2 w-full gap-4 md:gap-0'>
+              <BlogImage/>
+              <BlogImage/>
+              <BlogImage/>
+              <BlogImage/>
             </div>
           </div>
         </div>

@@ -1,7 +1,9 @@
 import project1 from './images/project/1.png'
 import project2 from './images/project/2.png'
+import project3 from './images/project/3.png'
 
 import react from './images/language/react.png'
+import vue from './images/language/vue.png'
 import tailwind from './images/language/tailwind.png'
 
 const data = [
@@ -19,7 +21,7 @@ const data = [
         image: tailwind,
       },
     ],
-    "deskripsi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ea fugit eligendi iste aperiam quas qui, adipisci illum dolore recusandae, debitis numquam enim? Voluptatibus velit quae praesentium rerum fugit aliquid?"
+    "deskripsi": "landing page for BUTTMKP (Balai Uji Terap Teknik dan Metode Karantina Pertanian) website competition"
   },
   {
     "id": "2",
@@ -35,23 +37,23 @@ const data = [
         image: tailwind,
       },
     ],
-    "deskripsi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ea fugit eligendi iste aperiam quas qui, adipisci illum dolore recusandae, debitis numquam enim? Voluptatibus velit quae praesentium rerum fugit aliquid?"
+    "deskripsi": "website landing page untuk pembelian tiket pentas seni dari The Student Activity Unit telkom university from bogor"
   },
   {
     "id": "3",
-    "name": "GRAB IT FAST 2022",
-    "image": project2,
+    "name": "Info Gempa Terkini",
+    "image": project3,
     "language": [
       {
-        name: 'React',
-        image: react, 
+        name: 'Vue',
+        image: vue, 
       },
       {
         name: 'Tailwind Css',
         image: tailwind,
       },
     ],
-    "deskripsi": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ea fugit eligendi iste aperiam quas qui, adipisci illum dolore recusandae, debitis numquam enim? Voluptatibus velit quae praesentium rerum fugit aliquid?"
+    "deskripsi": "the latest earthquake info in Indonesia, data is obtained from BMKG (Meteorological, Climatological, and Geophysical Agency) every 10 minutes."
   }
 ]
 

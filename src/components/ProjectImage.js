@@ -17,11 +17,11 @@ function ProjectImage(props) {
       {isHovering && (
           <div className='absolute transition-all h-full w-full top-0 duration-200'  onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} >
             <div className="group relative z-20 h-full text-black ">
-              <div className='flex h-full bg-gradient-to-t from-primary-black/60'>
+              <div className='flex h-full bg-primary-black/90 duration-500'>
                 <div className='m-auto space-x-5 space-y-5 text-white'>
                   <div className='flex justify-center'>
                     <div className='w-full px-5 lg:px-0 lg:w-5/12 space-y-2 lg:space-y-4'>
-                      <div className='text-white font-semibold text-2xl lg:text-4xl'>
+                      <div className='text-white font-semibold text-2xl uppercase lg:text-4xl'>
                         {props.name}
                       </div>
                       <div className='hidden lg:block'>
@@ -66,7 +66,7 @@ function ProjectImage(props) {
             </div>
           </div>
         )} 
-      <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className={"group-hover:blur-[4px] relative z-10 w-full h-[42rem] bg-transparant bg-cover lg:bg-contain xl:bg-cover bg-no-repeat bg-center  duration-300"} style={{backgroundImage:`url(${props.image})`}}>
+      <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className={" relative z-10 w-full h-[42rem] bg-transparant bg-cover lg:bg-contain xl:bg-cover bg-no-repeat bg-center  duration-300"} style={{backgroundImage:`url(${props.image})`}}>
       </div>   
 
     </div>
