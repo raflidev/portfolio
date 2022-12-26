@@ -66,7 +66,7 @@ function ProjectImage(props) {
             </div>
           </div>
         )} 
-      <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className={" relative z-10 w-full h-[42rem] bg-transparant bg-cover lg:bg-contain xl:bg-cover bg-no-repeat bg-center  duration-300"} style={{backgroundImage:`url(${props.image})`}}>
+      <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className={" relative z-10 w-full max-lg:h-[20rem] h-[42rem] bg-transparant bg-cover lg:bg-contain xl:bg-cover bg-no-repeat bg-center  duration-300"} style={{backgroundImage:`url(${props.image})`}}>
       </div>   
 
     </div>

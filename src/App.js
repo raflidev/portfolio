@@ -10,7 +10,24 @@ import data from './assets/project';
 import certi from "./assets/certificate"
 import BlogImage from './components/BlogImage';
 
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+
 function App() {
+
+  const [blog, setBlog] = useState([]);
+
+  useEffect(() => {
+    blog.length === 0 && getBlog();
+  }, []);
+
+  const getBlog = () => {
+    axios.get(`https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fkotak-it`).then(res => {
+          const data = res.data;
+          setBlog(data);
+    });
+  }
+
   return (
     <div className='relative font-inter overflow-x-hidden group/primary '>
       <div className='absolute top-0'>
@@ -41,7 +58,7 @@ function App() {
       </div>
       <div className='px-10 xl:px-28 bg-primary-black'>
         <div className='py-5  min-h-screen font-inter'>
-          <div id="navbar">
+          <div id="navbar" className='hidden md:block'>
             <div className='flex justify-between items-center'>
               <div>
                 <img src={logo} className="w-14 rounded-full hover:cursor-pointer" alt="" />
@@ -179,11 +196,12 @@ function App() {
           <div className='text-6xl font-bold py-5 pt-12'>Blog</div>
           <div className='text-xl font-medium pt-2 pb-10'>Sometimes i write and sharing</div>
           <div className='flex w-full'>
-            <div className='grid grid-cols-1 lg:grid-cols-2 w-full gap-4 md:gap-0'>
-              <BlogImage/>
-              <BlogImage/>
-              <BlogImage/>
-              <BlogImage/>
+            <div className='grid grid-cols-1 lg:grid-cols-2 w-full gap-4'>
+              { blog.length != 0 && blog.items.map((item, index) => {
+                return (
+                  <BlogImage image={item.thumbnail} title={item.title} key={index} />
+                )
+              }, [])}
             </div>
           </div>
         </div>
