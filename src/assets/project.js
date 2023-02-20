@@ -54,7 +54,23 @@ const data = [
       },
     ],
     "deskripsi": "the latest earthquake info in Indonesia, data is obtained from BMKG (Meteorological, Climatological, and Geophysical Agency) every 10 minutes."
-  }
+  },
+  {
+    "id": "4",
+    "name": "Sekala Pasopati",
+    "image": project3,
+    "language": [
+      {
+        name: 'React',
+        image: react, 
+      },
+      {
+        name: 'Tailwind Css',
+        image: tailwind,
+      },
+    ],
+    "deskripsi": "the latest earthquake info in Indonesia, data is obtained from BMKG (Meteorological, Climatological, and Geophysical Agency) every 10 minutes."
+  },
 ]
 
 export default data;

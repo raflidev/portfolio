@@ -8,6 +8,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 import Navbar from '../components/Navbar';
+import { Link } from 'react-router-dom';
 
 function Home() {
   const [blog, setBlog] = useState([]);
@@ -130,8 +131,8 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className='flex justify-center mt-10'>
-              <button className='py-3 px-10 border border-white rounded-full'>More</button>
+          <div className='relative z-30 flex justify-center mt-10'>
+              <Link to="/project" className='py-3 px-10 border border-white rounded-full hover:bg-primary-orange hover:border-transparent hover:-translate-y-1 duration-200'>More</Link>
           </div>
         </section>
 
@@ -190,7 +191,7 @@ function Home() {
                 <div className='grid grid-cols-1 lg:grid-cols-2 w-full gap-4'>
                 { blog.length != 0 && blog.items.map((item, index) => {
                     return (
-                    <BlogImage image={item.thumbnail} title={item.title} date={item.pubDate} key={index} />
+                    <BlogImage category={item.categories} image={item.thumbnail} title={item.title} link={item.link} date={item.pubDate} key={index} />
                     )
                 }, [])}
                 </div>
