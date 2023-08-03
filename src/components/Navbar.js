@@ -21,16 +21,16 @@ export default function Navbar() {
               </div>
               <div className='space-x-10 text-white flex text-lg'>
                 <div>
-                  <Link to="aboutme" spy={true} smooth={true} duration={1000} offset={-50} activeClass="border-b-2 border-white" className='hover:border-b-2 hover:border-white'>About me</Link>
+                  <Link to="aboutme" spy={true} smooth={true} duration={1000} offset={-50} activeClass="border-b-2 border-white" className='hover:border-b-2 hover:cursor-pointer hover:border-white'>About me</Link>
                 </div>
                 <div>
-                  <Link to="project" spy={true} smooth={true} duration={1000} offset={-50} activeClass="border-b-2 border-white" className='hover:border-b-2 hover:border-white'>Project</Link>
+                  <Link to="project" spy={true} smooth={true} duration={1000} offset={-50} activeClass="border-b-2 border-white" className='hover:border-b-2 hover:cursor-pointer hover:border-white'>Project</Link>
                 </div>
                 <div>
-                  <Link to="certificate" spy={true} smooth={true} duration={1000} offset={-50} activeClass="border-b-2 border-white" className='hover:border-b-2 hover:border-white'>Certificate</Link>
+                  <Link to="certificate" spy={true} smooth={true} duration={1000} offset={-50} activeClass="border-b-2 border-white" className='hover:border-b-2 hover:cursor-pointer hover:border-white'>Certificate</Link>
                 </div>
                 <div>
-                  <Link to="blog" spy={true} smooth={true} duration={1000} offset={-50} activeClass="border-b-2 border-white" className='hover:border-b-2 hover:border-white'>Blog</Link>
+                  <Link to="blog" spy={true} smooth={true} duration={1000} offset={-50} activeClass="border-b-2 border-white" className='hover:border-b-2 hover:cursor-pointer hover:border-white'>Blog</Link>
                 </div>
               </div>
             </div>

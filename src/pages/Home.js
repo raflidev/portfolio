@@ -8,13 +8,19 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 import Navbar from '../components/Navbar';
-import { Link } from 'react-router-dom';
+
+import bening from '../assets/images/corp/bening.png'
+import btp from '../assets/images/corp/btp.png'
+import buttmkp from '../assets/images/corp/buttmkp.png'
+import telkom from '../assets/images/corp/telkom.png'
+import sportgather from '../assets/images/corp/sportgather.png'
 
 function Home() {
   const [blog, setBlog] = useState([]);
+  const [showProject, setShowProject] = useState(3);
 
   useEffect(() => {
-    blog.length === 0 && getBlog();
+    if (blog.length === 0) getBlog();
   }, []);
 
   const getBlog = () => {
@@ -53,7 +59,7 @@ function Home() {
         </div>
       </div>
       
-      <div className='px-10 xl:px-28 bg-primary-black'>
+      <div className='px-5 md:px-10 xl:px-28 bg-primary-black'>
         <div className='py-5  min-h-screen font-inter'>
           <Navbar/>
           
@@ -63,7 +69,7 @@ function Home() {
                 <div className='flex h-screen'>
                   <div className='m-auto space-y-9'>
                     <div className='font-medium text-xl'>Hi, I'm Muhammad Rafli Ramadhan</div>
-                    <div className='font-bold text-6xl w-full md:w-4/6 leading-tight'>Frontend Web Developer</div>
+                    <div className='font-bold text-5xl lg:text-6xl w-full md:w-4/6 leading-tight'>Frontend Web Developer</div>
                     <div className='justify w-full md:w-9/12 3xl:w-8/12 font-medium'>
                     I'm a B.Sc. Computer Science candidate at Telkom University who a person who has interest in programming, likes to learn new things and make things from hobbies. I also like to make blog about web development when I have free time. To help others and improve my skills.
                     </div>
@@ -87,14 +93,33 @@ function Home() {
                 <div className='relative group/me'>
                   <div className='flex h-screen relative'>
                     <div className='m-auto'>
-                      <div className=''>
+                      <div className='relative'>
                         <div className='group-hover/me:-translate-y-10 group-hover/me:pt-20 group-hover/me:ring-2 group-hover/me:ring-orange-600 -mt-44 2xl:-mt-64 2xl:w-[20rem] 2xl:h-[25rem] duration-300 mx-auto h-[30rem] w-[24rem] 3xl:h-[30rem] 3xl:w-[24rem] bg-primary-orange'>
                         </div>
-                        <img className='absolute hover:grayscale-0 grayscale top-0 inset-x-0 mx-auto hover:-translate-y-1 duration-300 ' src={me} alt="" />  
+                        <img className='absolute hover:grayscale-0 grayscale top-0 inset-x-0 mx-auto hover:-translate-y-1 duration-300 scale-[1.6]' src={me} alt="" />  
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div className="grid px-3 lg:px-20 grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 md:gap-3 items-center content-center ">
+              <div className='mx-auto flex justify-center'>
+                <img src={bening} className='w-10/12 grayscale brightness-110' alt="" /> 
+              </div>
+              <div className='mx-auto flex justify-center'>
+                <img src={telkom} className='w-10/12 grayscale brightness-110' alt="" /> 
+              </div>
+              <div className='mx-auto flex justify-center'>
+                <img src={btp} className='w-10/12 grayscale brightness-110' alt="" /> 
+              </div>
+              <div className='mx-auto flex justify-center'>
+                <img src={buttmkp} className='w-1/2 grayscale brightness-110' alt="" /> 
+              </div>
+              <div className='mx-auto flex justify-center'>
+                <img src={sportgather} className='w-10/12 grayscale brightness-110' alt="" /> 
               </div>
             </div>
           </section>
@@ -123,16 +148,24 @@ function Home() {
             <div>
               <div className='grid grid-cols-1 gap-4 mt-10'>
                 {
-                  data.map((item, index) => {
+                  data.slice(0,showProject).map((item, index) => {
                     return (
-                      <ProjectImage image={item.image} name={item.name} deskripsi={item.deskripsi} language={item.language} key={index} />
+                      <ProjectImage image={item.image} name={item.name} link={item.link} deskripsi={item.deskripsi} language={item.language} category={item.category} index={index} key={index} />
                     )
                   }, [])}
               </div>
             </div>
           </div>
           <div className='relative z-30 flex justify-center mt-10'>
-              <Link to="/project" className='py-3 px-10 border border-white rounded-full hover:bg-primary-orange hover:border-transparent hover:-translate-y-1 duration-200'>More</Link>
+            {
+              showProject < data.length &&
+              <button onClick={() => setShowProject(showProject+2)} className='py-3 px-10 border border-white rounded-full hover:bg-primary-orange hover:border-transparent hover:-translate-y-1 duration-200'>More</button>
+            }
+
+            {
+              (showProject > data.length || showProject >= data.length) &&
+              <button onClick={() => setShowProject(3)} className='py-3 px-10 border border-white rounded-full hover:bg-primary-orange hover:border-transparent hover:-translate-y-1 duration-200'>Less</button>
+            }
           </div>
         </section>
 
@@ -157,7 +190,7 @@ function Home() {
           <div className='relative z-20'>
             <div className='text-6xl font-bold py-5 pt-12'>Certificate</div>
             <div className='text-xl font-medium pt-2 pb-10'>My Competency Certificate</div>
-            <div className="grid max-md:grid-cols-1 max-lg:grid-cols-2 grid-cols-2 gap-4">
+            <div className="grid max-md:grid-cols-1 max-lg:grid-cols-3 grid-cols-3 gap-4">
               {
                 certi.map((item, index) => {
                 return (
@@ -189,9 +222,9 @@ function Home() {
             <div className='text-xl font-medium pt-2 pb-10'>Sometimes i write and sharing</div>
             <div className='flex w-full'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 w-full gap-4'>
-                { blog.length != 0 && blog.items.map((item, index) => {
+                { blog.length !== 0 && blog.items.map((item, index) => {
                     return (
-                    <BlogImage category={item.categories} image={item.thumbnail} title={item.title} link={item.link} date={item.pubDate} key={index} />
+                    <BlogImage category={item.categories} image={item.thumbnail} title={item.title} date={item.pubDate} key={index} />
                     )
                 }, [])}
                 </div>
