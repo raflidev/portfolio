@@ -10,7 +10,7 @@ import tailwind from './images/language/tailwind.png'
 const data = [
   {
     "id": "1",
-    "name": "BUTTMKP",
+    "name": "BUTTMKP Landing Page",
     "category": "Web Development",
     "image": project1,
     "language":[

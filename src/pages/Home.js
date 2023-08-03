@@ -14,6 +14,7 @@ import btp from '../assets/images/corp/btp.png'
 import buttmkp from '../assets/images/corp/buttmkp.png'
 import telkom from '../assets/images/corp/telkom.png'
 import sportgather from '../assets/images/corp/sportgather.png'
+import CorpItem from '../components/CorpItem';
 
 function Home() {
   const [blog, setBlog] = useState([]);
@@ -106,42 +107,32 @@ function Home() {
           </section>
           <section>
             <div className="grid px-3 lg:px-20 grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 md:gap-3 items-center content-center ">
-              <div className='mx-auto flex justify-center'>
-                <img src={bening} className='w-10/12 grayscale brightness-110' alt="" /> 
-              </div>
-              <div className='mx-auto flex justify-center'>
-                <img src={telkom} className='w-10/12 grayscale brightness-110' alt="" /> 
-              </div>
-              <div className='mx-auto flex justify-center'>
-                <img src={btp} className='w-10/12 grayscale brightness-110' alt="" /> 
-              </div>
-              <div className='mx-auto flex justify-center'>
-                <img src={buttmkp} className='w-1/2 grayscale brightness-110' alt="" /> 
-              </div>
-              <div className='mx-auto flex justify-center'>
-                <img src={sportgather} className='w-10/12 grayscale brightness-110' alt="" /> 
-              </div>
+              <CorpItem image={bening}/>
+              <CorpItem image={telkom}/>
+              <CorpItem image={btp}/>
+              <CorpItem image={buttmkp}/>
+              <CorpItem image={sportgather}/>
             </div>
           </section>
         </div>
       </div>
 
-      <div className='min-h-screen text-white py-20 px-10 xl:px-28 bg-primary-black bg-start bg-contain bg-no-repeat bg-[url("./assets/images/bg-project.png")]'>
+      <div className='min-h-screen relative text-white py-20 px-10 xl:px-28 bg-primary-black bg-start bg-contain bg-no-repeat bg-[url("./assets/images/bg-project.png")]'>
         <section id="project" className='relative'>
           <div className='absolute -top-60'>
-          <div className="relative z-10 h-screen">
-            <div className='flex h-full'>
-              <div className='m-auto text-[20rem] font-bold text-clip opacity-20 font-outline-1 text-transparent'>
-              <div className='flex'>
-                <div className='flex space-x-10'>
-                  <div>
-                    Project
+            <div className="relative z-10 h-screen">
+              <div className='flex h-full'>
+                <div className='m-auto text-[20rem] font-bold text-clip opacity-20 font-outline-1 text-transparent'>
+                <div className='flex'>
+                  <div className='flex space-x-10'>
+                    <div>
+                      Project
+                    </div>
                   </div>
                 </div>
-              </div>
+                </div>
               </div>
             </div>
-          </div>
           </div>
           <div className='relative z-20'>
             <div className='text-6xl font-bold py-5 pt-12'>Project</div>
@@ -221,10 +212,10 @@ function Home() {
             <div className='text-6xl font-bold py-5 pt-12'>Blog</div>
             <div className='text-xl font-medium pt-2 pb-10'>Sometimes i write and sharing</div>
             <div className='flex w-full'>
-                <div className='grid grid-cols-1 lg:grid-cols-2 w-full gap-4'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 w-full gap-8'>
                 { blog.length !== 0 && blog.items.map((item, index) => {
                     return (
-                    <BlogImage category={item.categories} image={item.thumbnail} title={item.title} date={item.pubDate} key={index} />
+                    <BlogImage category={item.categories} image={item.thumbnail} title={item.title} date={item.pubDate} link={item.link} key={index} />
                     )
                 }, [])}
                 </div>

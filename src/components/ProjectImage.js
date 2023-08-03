@@ -10,7 +10,7 @@ function ProjectImage(props) {
       </div>
       <div className='h-full w-full top-0 duration-200'>
         <div className="relative z-20 h-full text-black duration-200">
-          <div className='flex px-0 md:px-10 h-full duration-500'>
+          <div className='flex px-0 h-full duration-500'>
             <div className='m-auto space-x-5 space-y-5 text-white'>
               <div className=''>
                 <div className='w-full px-0 md:px-5 lg:px-0 space-y-3 lg:space-y-4 py-4 lg:pt-0'>
