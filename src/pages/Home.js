@@ -143,7 +143,7 @@ with Vanilla JavaScript. I have been involved in multiple React JS and Laravel p
                 {
                   data.slice(0,showProject).map((item, index) => {
                     return (
-                      <ProjectImage image={item.image} name={item.name} link={item.link} deskripsi={item.deskripsi} language={item.language} category={item.category} index={index} key={index} />
+                      <ProjectImage image={item.image} name={item.name} github={item.github} link={item.link} deskripsi={item.deskripsi} language={item.language} category={item.category} index={index} key={index} />
                     )
                   }, [])}
               </div>

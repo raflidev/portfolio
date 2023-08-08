@@ -26,6 +26,7 @@ const data = [
     ],
     "deskripsi": "Landing page for BUTTMKP (Balai Uji Terap Teknik dan Metode Karantina Pertanian) website competition",
     "link": "https://buttmkp.vercel.app/",
+    "github": "https://github.com/raflidev/BUTTMKP",
   },
   {
     "id": 2,
@@ -44,6 +45,7 @@ const data = [
     ],
     "deskripsi": "Website landing page untuk pembelian tiket pentas seni dari The Student Activity Unit telkom university from bogor",
     "link": "https://gif22.vercel.app/",
+    "github": "https://github.com/raflidev/gif22"
   },
   {
     "id": 3,
@@ -62,6 +64,7 @@ const data = [
     ],
     "deskripsi": "The latest earthquake info in Indonesia, data is obtained from BMKG (Meteorological, Climatological, and Geophysical Agency) every 10 minutes.",
     "link": "https://info-gempa-terkini.vercel.app/",
+    "github": "https://github.com/raflidev/info-gempa-terkini"
   },
   {
     "id": 4,
@@ -80,6 +83,7 @@ const data = [
     ],
     "deskripsi": "landing page for the Sekala Pasopati housing area in Bandung",
     "link": "https://sekala-pasopati.vercel.app/",
+    "github": "https://github.com/raflidev/sekala-pasopati"
   },
   {
     "id": 5,
@@ -97,7 +101,7 @@ const data = [
       },
     ],
     "deskripsi": "Eid al-Adha savings application prototype.",
-    "link": "https://qurbanku.vercel.app/",
+    "link": "https://github.com/raflidev/qurbanku",
   },
 ]
 
