@@ -65,8 +65,8 @@ function Home() {
           <Navbar/>
           
           <section id="aboutme" className='relative z-20 text-white '>
-            <div className='flex justify-center xl:justify-between'>
-              <div className='w-full xl:w-10/12 3xl:w-7/12 relative z-20'>
+            <div className='flex justify-center md:justify-between'>
+              <div className='w-full lg:w-10/12 xl:w-7/12 relative z-20'>
                 <div className='flex h-screen'>
                   <div className='m-auto space-y-9'>
                     <div className='font-medium text-xl'>Hi, I'm Muhammad Rafli Ramadhan</div>
@@ -92,12 +92,12 @@ with Vanilla JavaScript. I have been involved in multiple React JS and Laravel p
                   </div>
                 </div>
               </div>
-              <div className='hidden 2xl:block w-full lg:w-1/2 mt-32'>
+              <div className='hidden lg:block w-full md:w-1/2 mt-32'>
                 <div className='relative group/me'>
                   <div className='flex h-screen relative'>
                     <div className='m-auto'>
                       <div className='relative'>
-                        <div className='group-hover/me:-translate-y-10 group-hover/me:pt-20 group-hover/me:ring-2 group-hover/me:ring-orange-600 -mt-44 2xl:-mt-64 2xl:w-[20rem] 2xl:h-[25rem] duration-300 mx-auto h-[30rem] w-[24rem] 3xl:h-[30rem] 3xl:w-[24rem] bg-primary-orange'>
+                        <div className='group-hover/me:-translate-y-10 group-hover/me:pt-20 group-hover/me:ring-2 group-hover/me:ring-orange-600 -mt-44 duration-300 mx-auto h-[15rem] w-[20rem] lg:h-[30rem]  lg:w-[24rem] bg-primary-orange'>
                         </div>
                         <img className='absolute hover:grayscale-0 grayscale top-0 inset-x-0 mx-auto hover:-translate-y-1 duration-300 scale-[1.6]' src={me} alt="" />  
                       </div>
@@ -183,7 +183,7 @@ with Vanilla JavaScript. I have been involved in multiple React JS and Laravel p
           <div className='relative z-20'>
             <div className='text-6xl font-bold py-5 pt-12'>Certificate</div>
             <div className='text-xl font-medium pt-2 pb-10'>My Competency Certificate</div>
-            <div className="grid max-md:grid-cols-1 max-lg:grid-cols-3 grid-cols-3 gap-4">
+            <div className="grid max-md:grid-cols-1 max-lg:grid-cols-2 grid-cols-2 gap-4">
               {
                 certi.map((item, index) => {
                 return (
