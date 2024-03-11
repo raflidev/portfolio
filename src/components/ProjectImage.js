@@ -11,11 +11,11 @@ function ProjectImage(props) {
       <div className='h-full w-full top-0 duration-200'>
         <div className="relative z-20 h-full text-black duration-200">
           <div className='flex px-0 h-full duration-500'>
-            <div className='space-x-5 space-y-5 text-white'>
+            <div className='space-x-5 space-y-5 text-white w-full'>
               <div className='w-full'>
                 <div className='w-full px-0 md:px-5 lg:px-0 space-y-3 lg:space-y-4 py-4 lg:pt-0'>
                   <div className='font-medium text-xl lg:text-md'>{props.category}</div>
-                  <div className='text-white  font-bold text-3xl uppercase lg:text-4xl'>
+                  <div className='text-white font-bold text-3xl uppercase lg:text-4xl'>
                     {props.name}
                   </div>
                   <div className='duration-200'>
@@ -24,13 +24,13 @@ function ProjectImage(props) {
                   <div className='flex space-x-4'>
                     {props.language.map((item, index) => {
                       return (
-                        <img src={item.image} className="w-7 h-6 lg:w-10 lg:h-9" alt="" />
+                        <img src={item.image} key={index} className="w-7 h-6 lg:w-10 lg:h-9" alt="" />
                       )
                     },[])}
                   </div>
-                  <div className='space-x-4 pt-4'>
+                  <div className='space-x-0 space-y-4 lg:space-y-0 lg:space-x-4 pt-4'>
                     <a href={`${props.link}`} target='_blank' rel="noreferrer" className='text-white duration-300 border-transparent block lg:inline-block text-center lg:text-left'>
-                      <div className='flex space-x-2 items-center w-full lg:w-auto justify-center lg:justify-start bg-primary-orange hover:-translate-y-1 duration-200 px-2 py-2 lg:py-0 rounded'>
+                      <div className='flex space-x-2 items-center w-full lg:w-auto justify-center lg:justify-start bg-primary-orange hover:-translate-y-1 duration-200 px-2 lg:px-3 py-2 lg:py-2 rounded'>
                         <span className='text-lg'>Visit</span>
                         <div>
                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5  h-5">
@@ -40,7 +40,7 @@ function ProjectImage(props) {
                       </div>
                     </a>
                     <a href={`${props.github}`} target='_blank' rel="noreferrer" className='text-white duration-300 border-transparent block lg:inline-block text-center lg:text-left'>
-                      <div className='flex space-x-2 items-center w-full lg:w-auto justify-center lg:justify-start bg-primary-orange hover:-translate-y-1 duration-200 px-2 py-2 lg:py-0 rounded'>
+                      <div className='flex space-x-2 items-center w-full lg:w-auto justify-center lg:justify-start bg-primary-orange hover:-translate-y-1 duration-200 px-2 lg:px-3 py-2 lg:py-2 rounded'>
                         <span className='text-lg'>Github</span>
                         <div>
                         <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 text-white" fill="currentColor" >

@@ -202,7 +202,7 @@ with Vanilla JavaScript. I have been involved in multiple React JS and Laravel p
                   <div className='flex'>
                     <div className='flex space-x-10'>
                       <div>
-                       Blog
+                        Blog
                       </div>
                     </div>
                   </div>
