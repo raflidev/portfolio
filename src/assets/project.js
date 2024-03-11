@@ -101,7 +101,8 @@ const data = [
       },
     ],
     "deskripsi": "Eid al-Adha savings application prototype.",
-    "link": "https://github.com/raflidev/qurbanku",
+    "link": "https://qurbanku.vercel.app/",
+    "github": "https://github.com/raflidev/qurbanku",
   },
 ]
 
