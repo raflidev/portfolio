@@ -11,6 +11,25 @@ import tailwind from './images/language/tailwind.png'
 const data = [
   {
     "id": 1,
+    "name": "Sekala Pasopati",
+    "category": "Web Development",
+    "image": project4,
+    "language": [
+      {
+        name: 'React',
+        image: react, 
+      },
+      {
+        name: 'Tailwind Css',
+        image: tailwind,
+      },
+    ],
+    "deskripsi": "landing page for the Sekala Pasopati housing area in Bandung",
+    "link": "https://sekala-pasopati.vercel.app/",
+    "github": "https://github.com/raflidev/sekala-pasopati"
+  },
+  {
+    "id": 2,
     "name": "BUTTMKP Landing Page",
     "category": "Web Development",
     "image": project1,
@@ -29,7 +48,7 @@ const data = [
     "github": "https://github.com/raflidev/BUTTMKP",
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "GRAB IT FAST 2022",
     "category": "Web Development",
     "image": project2,
@@ -48,7 +67,7 @@ const data = [
     "github": "https://github.com/raflidev/gif22"
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "Info Gempa Terkini",
     "category": "Web Development",
     "image": project3,
@@ -65,25 +84,6 @@ const data = [
     "deskripsi": "The latest earthquake info in Indonesia, data is obtained from BMKG (Meteorological, Climatological, and Geophysical Agency) every 10 minutes.",
     "link": "https://info-gempa-terkini.vercel.app/",
     "github": "https://github.com/raflidev/info-gempa-terkini"
-  },
-  {
-    "id": 4,
-    "name": "Sekala Pasopati",
-    "category": "Web Development",
-    "image": project4,
-    "language": [
-      {
-        name: 'React',
-        image: react, 
-      },
-      {
-        name: 'Tailwind Css',
-        image: tailwind,
-      },
-    ],
-    "deskripsi": "landing page for the Sekala Pasopati housing area in Bandung",
-    "link": "https://sekala-pasopati.vercel.app/",
-    "github": "https://github.com/raflidev/sekala-pasopati"
   },
   {
     "id": 5,

@@ -27,6 +27,7 @@ function Home() {
   const getBlog = () => {
     axios.get(`https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fkotak-it`).then(res => {
           const data = res.data;
+          console.log(data);
           setBlog(data);
     });
   }
@@ -72,8 +73,8 @@ function Home() {
                     <div className='font-medium text-xl'>Hi, I'm Muhammad Rafli Ramadhan</div>
                     <div className='font-bold text-5xl lg:text-6xl w-full md:w-4/6 leading-tight'>Frontend Web Developer</div>
                     <div className='justify w-full md:w-9/12 3xl:w-8/12 font-medium'>
-                    I'm B.Sc. Computer Science candidate at Telkom University who has a passion for continuously learning
-new things. Specializing in React JS. However, I can also work with Laravel for backend projects. Additionally, I have experience working
+                    I'm a Frontend Web Developer and B.Sc. Computer Science candidate at Telkom University who has a passion for continuously learning 
+new things. Specializing in React JS. However, I can also work with Laravel for backend projects. Additionally, I have experience working 
 with Vanilla JavaScript. I have been involved in multiple React JS and Laravel projects.
                     </div>
                     <div className='flex-col lg:flex-row items-center space-x-0 lg:space-x-5 space-y-4 lg:space-y-0'>
@@ -83,7 +84,7 @@ with Vanilla JavaScript. I have been involved in multiple React JS and Laravel p
                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.2} stroke="currentColor" className="w-6 h-6 animate-[wiggle_1s_ease-in-out_infinite]">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
                           </svg>
-                          <a target='_blank' href="/CV_Rafli.pdf" className='duration-300'>
+                          <a target='_blank' href="https://drive.google.com/drive/folders/1fLPe6znDbFMnKldL5g41l84xiDFK6ndQ?usp=sharing" className='duration-300'>
                             Download CV
                           </a>
                         </div>
@@ -99,7 +100,7 @@ with Vanilla JavaScript. I have been involved in multiple React JS and Laravel p
                       <div className='relative'>
                         <div className='group-hover/me:-translate-y-10 group-hover/me:pt-20 group-hover/me:ring-2 group-hover/me:ring-orange-600 -mt-44 duration-300 mx-auto h-[15rem] w-[20rem] lg:h-[30rem]  lg:w-[24rem] bg-primary-orange'>
                         </div>
-                        <img className='absolute hover:grayscale-0 grayscale top-0 inset-x-0 mx-auto hover:-translate-y-1 duration-300 scale-[1.6]' src={me} alt="" />  
+                        <img className='absolute top-0 inset-x-0 mx-auto hover:-translate-y-1 duration-300 scale-[1.6]' src={me} alt="" />  
                       </div>
                     </div>
                   </div>
