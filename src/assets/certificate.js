@@ -24,9 +24,9 @@ const certi = [
   },
   {
     "id": 4,
-    "title": "Membangun Progressive Web Apps",
+    "title": "Belajar Fundamental Front-End Web Development",
     "image": cert4,
-    "link": "https://www.dicoding.com/certificates/MEPJ559V6P3V"
+    "link": "https://www.dicoding.com/certificates/L4PQMM5GOZO1"
   }
   
 ]

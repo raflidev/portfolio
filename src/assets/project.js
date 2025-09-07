@@ -3,6 +3,7 @@ import project2 from './images/project/2.png'
 import project3 from './images/project/3.png'
 import project4 from './images/project/4.png'
 import project5 from './images/project/5.png'
+import project6 from './images/project/6.png'
 
 import react from './images/language/react.png'
 import vue from './images/language/vue.png'
@@ -11,6 +12,25 @@ import tailwind from './images/language/tailwind.png'
 const data = [
   {
     "id": 1,
+    "name": "17+8 Tone",
+    "category": "Web Application",
+    "image": project6,
+    "language": [
+      {
+        name: 'React',
+        image: react, 
+      },
+      {
+        name: 'Tailwind Css',
+        image: tailwind,
+      },
+    ],
+    "deskripsi": "Transformasi gambar dengan kombinasi warna Hero Green & Brave Pink untuk solidaritas. Upload dan proses gambar dilakukan di perangkat pengguna tanpa menyimpan ke server.",
+    "link": "https://178tone.vercel.app/",
+    "github": "https://github.com/raflidev/178tone"
+  },
+  {
+    "id": 2,
     "name": "Sekala Pasopati",
     "category": "Web Development",
     "image": project4,
@@ -29,7 +49,7 @@ const data = [
     "github": "https://github.com/raflidev/sekala-pasopati"
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "BUTTMKP Landing Page",
     "category": "Web Development",
     "image": project1,
@@ -48,7 +68,7 @@ const data = [
     "github": "https://github.com/raflidev/BUTTMKP",
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "GRAB IT FAST 2022",
     "category": "Web Development",
     "image": project2,
@@ -67,7 +87,7 @@ const data = [
     "github": "https://github.com/raflidev/gif22"
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "Info Gempa Terkini",
     "category": "Web Development",
     "image": project3,
@@ -86,7 +106,7 @@ const data = [
     "github": "https://github.com/raflidev/info-gempa-terkini"
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "QurbanKu",
     "category": "Web Development",
     "image": project5,

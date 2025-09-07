@@ -26,11 +26,11 @@ function Project() {
           <div className='relative z-20'>
             <div className='text-6xl font-bold py-5 pt-12'>Project</div>
             <div>
-              <div className='grid grid-cols-2 gap-4 mt-10'>
+              <div className='grid grid-cols-1 gap-4 mt-10'>
                 {
                   data.map((item, index) => {
                     return (
-                      <ProjectImage image={item.image} name={item.name} deskripsi={item.deskripsi} language={item.language} key={index} />
+                      <ProjectImage id={item.id} image={item.image} name={item.name} github={item.github} link={item.link} deskripsi={item.deskripsi} language={item.language} category={item.category} index={index} key={index} />
                     )
                   }, [])}
               </div>
